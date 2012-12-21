@@ -1,0 +1,1482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MladinskaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="MladinskaModelStoreContainer">
+          <EntitySet Name="BRAK" EntityType="MladinskaModel.Store.BRAK" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CLENOVI_A" EntityType="MladinskaModel.Store.CLENOVI_A" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CLENOVI_D" EntityType="MladinskaModel.Store.CLENOVI_D" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CLENOVI_M" EntityType="MladinskaModel.Store.CLENOVI_M" store:Type="Tables" store:Schema="dbo" store:Name="CLENOVI_M">
+            <DefiningQuery>SELECT 
+      [CLENOVI_M].[BROJ] AS [BROJ], 
+      [CLENOVI_M].[PREZIMEIME] AS [PREZIMEIME], 
+      [CLENOVI_M].[TATKOVO] AS [TATKOVO], 
+      [CLENOVI_M].[DATUMRAG] AS [DATUMRAG], 
+      [CLENOVI_M].[LICNAKARTA] AS [LICNAKARTA], 
+      [CLENOVI_M].[MB] AS [MB], 
+      [CLENOVI_M].[OBRAZOVANIE] AS [OBRAZOVANIE], 
+      [CLENOVI_M].[ZANIMANJE] AS [ZANIMANJE], 
+      [CLENOVI_M].[DOPZANIMANJE] AS [DOPZANIMANJE], 
+      [CLENOVI_M].[ADRESA] AS [ADRESA], 
+      [CLENOVI_M].[NASELBA] AS [NASELBA], 
+      [CLENOVI_M].[POL] AS [POL], 
+      [CLENOVI_M].[DATUM_BIROV] AS [DATUM_BIROV], 
+      [CLENOVI_M].[VOZACKA] AS [VOZACKA], 
+      [CLENOVI_M].[TELEFONI] AS [TELEFONI], 
+      [CLENOVI_M].[DATUM_CLENARINA] AS [DATUM_CLENARINA], 
+      [CLENOVI_M].[DATUM_ZACLEN] AS [DATUM_ZACLEN], 
+      [CLENOVI_M].[BRACNA] AS [BRACNA], 
+      [CLENOVI_M].[ZABELESKA] AS [ZABELESKA], 
+      [CLENOVI_M].[NASELBA_ICO] AS [NASELBA_ICO], 
+      [CLENOVI_M].[ZAN_ICO] AS [ZAN_ICO], 
+      [CLENOVI_M].[DOPZAN_ICO] AS [DOPZAN_ICO]
+      FROM [dbo].[CLENOVI_M] AS [CLENOVI_M]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DOG_A" EntityType="MladinskaModel.Store.DOG_A" store:Type="Tables" store:Schema="dbo" store:Name="DOG_A">
+            <DefiningQuery>SELECT 
+      [DOG_A].[BROJ] AS [BROJ], 
+      [DOG_A].[GODINA] AS [GODINA], 
+      [DOG_A].[TIPA] AS [TIPA], 
+      [DOG_A].[DATUM] AS [DATUM], 
+      [DOG_A].[OPISRABOTA] AS [OPISRABOTA], 
+      [DOG_A].[OPISCLEN2] AS [OPISCLEN2], 
+      [DOG_A].[DEJNOST] AS [DEJNOST], 
+      [DOG_A].[PERSONALEN] AS [PERSONALEN], 
+      [DOG_A].[POPUST] AS [POPUST], 
+      [DOG_A].[NETO] AS [NETO], 
+      [DOG_A].[BRUTO] AS [BRUTO], 
+      [DOG_A].[DAT_OD] AS [DAT_OD], 
+      [DOG_A].[DAT_DO] AS [DAT_DO], 
+      [DOG_A].[DOG_F] AS [DOG_F], 
+      [DOG_A].[GOD_F] AS [GOD_F], 
+      [DOG_A].[PROVIZIJA] AS [PROVIZIJA], 
+      [DOG_A].[KRAJ] AS [KRAJ], 
+      [DOG_A].[prazno] AS [prazno], 
+      [DOG_A].[tempf] AS [tempf], 
+      [DOG_A].[MNOZI] AS [MNOZI], 
+      [DOG_A].[SOBIRAJ] AS [SOBIRAJ], 
+      [DOG_A].[RABOTNIK1] AS [RABOTNIK1]
+      FROM [dbo].[DOG_A] AS [DOG_A]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DOG_D" EntityType="MladinskaModel.Store.DOG_D" store:Type="Tables" store:Schema="dbo" store:Name="DOG_D">
+            <DefiningQuery>SELECT 
+      [DOG_D].[BROJ] AS [BROJ], 
+      [DOG_D].[GODINA] AS [GODINA], 
+      [DOG_D].[TIPA] AS [TIPA], 
+      [DOG_D].[DATUM] AS [DATUM], 
+      [DOG_D].[OPISRABOTA] AS [OPISRABOTA], 
+      [DOG_D].[OPISCLEN2] AS [OPISCLEN2], 
+      [DOG_D].[PERSONALEN] AS [PERSONALEN], 
+      [DOG_D].[POPUST] AS [POPUST], 
+      [DOG_D].[NETO] AS [NETO], 
+      [DOG_D].[BRUTO] AS [BRUTO], 
+      [DOG_D].[DAT_OD] AS [DAT_OD], 
+      [DOG_D].[DAT_DO] AS [DAT_DO], 
+      [DOG_D].[DOG_F] AS [DOG_F], 
+      [DOG_D].[GOD_F] AS [GOD_F], 
+      [DOG_D].[PROVIZIJA] AS [PROVIZIJA], 
+      [DOG_D].[KRAJ] AS [KRAJ], 
+      [DOG_D].[prazno] AS [prazno], 
+      [DOG_D].[tempf] AS [tempf]
+      FROM [dbo].[DOG_D] AS [DOG_D]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DOG_F" EntityType="MladinskaModel.Store.DOG_F" store:Type="Tables" store:Schema="dbo" store:Name="DOG_F">
+            <DefiningQuery>SELECT 
+      [DOG_F].[BROJ] AS [BROJ], 
+      [DOG_F].[GODINA] AS [GODINA], 
+      [DOG_F].[DATUM] AS [DATUM], 
+      [DOG_F].[FIRMA] AS [FIRMA], 
+      [DOG_F].[KONTAKTLICE] AS [KONTAKTLICE], 
+      [DOG_F].[TELEFONI] AS [TELEFONI], 
+      [DOG_F].[PROVIZIJA_M] AS [PROVIZIJA_M], 
+      [DOG_F].[PROVIZIJA_A] AS [PROVIZIJA_A], 
+      [DOG_F].[PROVIZIJA_D] AS [PROVIZIJA_D], 
+      [DOG_F].[ZATVOREN] AS [ZATVOREN]
+      FROM [dbo].[DOG_F] AS [DOG_F]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DOG_M" EntityType="MladinskaModel.Store.DOG_M" store:Type="Tables" store:Schema="dbo" store:Name="DOG_M">
+            <DefiningQuery>SELECT 
+      [DOG_M].[BROJ] AS [BROJ], 
+      [DOG_M].[GODINA] AS [GODINA], 
+      [DOG_M].[DATUM] AS [DATUM], 
+      [DOG_M].[OPISRABOTA] AS [OPISRABOTA], 
+      [DOG_M].[SAATNINA] AS [SAATNINA], 
+      [DOG_M].[CASOVI] AS [CASOVI], 
+      [DOG_M].[NETO] AS [NETO], 
+      [DOG_M].[BRUTO] AS [BRUTO], 
+      [DOG_M].[DAT_OD] AS [DAT_OD], 
+      [DOG_M].[DAT_DO] AS [DAT_DO], 
+      [DOG_M].[DOG_F] AS [DOG_F], 
+      [DOG_M].[GOD_F] AS [GOD_F], 
+      [DOG_M].[PROVIZIJA] AS [PROVIZIJA], 
+      [DOG_M].[HRANARINA] AS [HRANARINA], 
+      [DOG_M].[PREVOZ] AS [PREVOZ], 
+      [DOG_M].[KRAJ] AS [KRAJ], 
+      [DOG_M].[prazno] AS [prazno], 
+      [DOG_M].[tempf] AS [tempf], 
+      [DOG_M].[PROSEK_RM] AS [PROSEK_RM]
+      FROM [dbo].[DOG_M] AS [DOG_M]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="dtproperties" EntityType="MladinskaModel.Store.dtproperties" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FAK_DOG_A" EntityType="MladinskaModel.Store.FAK_DOG_A" store:Type="Tables" store:Schema="dbo" store:Name="FAK_DOG_A">
+            <DefiningQuery>SELECT 
+      [FAK_DOG_A].[BROJ_F] AS [BROJ_F], 
+      [FAK_DOG_A].[GODINA_F] AS [GODINA_F], 
+      [FAK_DOG_A].[BROJ_A] AS [BROJ_A], 
+      [FAK_DOG_A].[GODINA_A] AS [GODINA_A], 
+      [FAK_DOG_A].[BRUTO] AS [BRUTO]
+      FROM [dbo].[FAK_DOG_A] AS [FAK_DOG_A]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FAK_DOG_D" EntityType="MladinskaModel.Store.FAK_DOG_D" store:Type="Tables" store:Schema="dbo" store:Name="FAK_DOG_D">
+            <DefiningQuery>SELECT 
+      [FAK_DOG_D].[BROJ_F] AS [BROJ_F], 
+      [FAK_DOG_D].[GODINA_F] AS [GODINA_F], 
+      [FAK_DOG_D].[BROJ_A] AS [BROJ_A], 
+      [FAK_DOG_D].[GODINA_A] AS [GODINA_A], 
+      [FAK_DOG_D].[BRUTO] AS [BRUTO]
+      FROM [dbo].[FAK_DOG_D] AS [FAK_DOG_D]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FAK_DOG_M" EntityType="MladinskaModel.Store.FAK_DOG_M" store:Type="Tables" store:Schema="dbo" store:Name="FAK_DOG_M">
+            <DefiningQuery>SELECT 
+      [FAK_DOG_M].[BROJ_F] AS [BROJ_F], 
+      [FAK_DOG_M].[GODINA_F] AS [GODINA_F], 
+      [FAK_DOG_M].[BROJ_A] AS [BROJ_A], 
+      [FAK_DOG_M].[GODINA_A] AS [GODINA_A], 
+      [FAK_DOG_M].[BRUTO] AS [BRUTO]
+      FROM [dbo].[FAK_DOG_M] AS [FAK_DOG_M]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FAKTURI_A" EntityType="MladinskaModel.Store.FAKTURI_A" store:Type="Tables" store:Schema="dbo" store:Name="FAKTURI_A">
+            <DefiningQuery>SELECT 
+      [FAKTURI_A].[BROJ] AS [BROJ], 
+      [FAKTURI_A].[GODINA] AS [GODINA], 
+      [FAKTURI_A].[DATUMF] AS [DATUMF], 
+      [FAKTURI_A].[NETO] AS [NETO], 
+      [FAKTURI_A].[DANOSN] AS [DANOSN], 
+      [FAKTURI_A].[PERSDANOK] AS [PERSDANOK], 
+      [FAKTURI_A].[TROSOCI] AS [TROSOCI], 
+      [FAKTURI_A].[DDV_OSN] AS [DDV_OSN], 
+      [FAKTURI_A].[DDV_IZN] AS [DDV_IZN], 
+      [FAKTURI_A].[DDV_STAPKA] AS [DDV_STAPKA], 
+      [FAKTURI_A].[PERS_STAPKA] AS [PERS_STAPKA], 
+      [FAKTURI_A].[POPUST] AS [POPUST], 
+      [FAKTURI_A].[IZNOS] AS [IZNOS], 
+      [FAKTURI_A].[TEKST] AS [TEKST], 
+      [FAKTURI_A].[PLATENO] AS [PLATENO], 
+      [FAKTURI_A].[DATUMP] AS [DATUMP], 
+      [FAKTURI_A].[GL_SPISOK] AS [GL_SPISOK], 
+      [FAKTURI_A].[GOD_S] AS [GOD_S], 
+      [FAKTURI_A].[DOG_K] AS [DOG_K], 
+      [FAKTURI_A].[GOD_K] AS [GOD_K], 
+      [FAKTURI_A].[prazno] AS [prazno], 
+      [FAKTURI_A].[tempf] AS [tempf], 
+      [FAKTURI_A].[SEUSTE_NE] AS [SEUSTE_NE]
+      FROM [dbo].[FAKTURI_A] AS [FAKTURI_A]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FAKTURI_D" EntityType="MladinskaModel.Store.FAKTURI_D" store:Type="Tables" store:Schema="dbo" store:Name="FAKTURI_D">
+            <DefiningQuery>SELECT 
+      [FAKTURI_D].[BROJ] AS [BROJ], 
+      [FAKTURI_D].[GODINA] AS [GODINA], 
+      [FAKTURI_D].[DATUMF] AS [DATUMF], 
+      [FAKTURI_D].[NETO] AS [NETO], 
+      [FAKTURI_D].[DANOSN] AS [DANOSN], 
+      [FAKTURI_D].[PERS_STAPKA1] AS [PERS_STAPKA1], 
+      [FAKTURI_D].[PERSDANOK1] AS [PERSDANOK1], 
+      [FAKTURI_D].[PERS_STAPKA2] AS [PERS_STAPKA2], 
+      [FAKTURI_D].[PERSDANOK2] AS [PERSDANOK2], 
+      [FAKTURI_D].[PERS_STAPKA3] AS [PERS_STAPKA3], 
+      [FAKTURI_D].[PERSDANOK3] AS [PERSDANOK3], 
+      [FAKTURI_D].[TROSOCI] AS [TROSOCI], 
+      [FAKTURI_D].[DDV_OSN] AS [DDV_OSN], 
+      [FAKTURI_D].[DDV_IZN] AS [DDV_IZN], 
+      [FAKTURI_D].[DDV_STAPKA] AS [DDV_STAPKA], 
+      [FAKTURI_D].[IZNOS] AS [IZNOS], 
+      [FAKTURI_D].[TEKST] AS [TEKST], 
+      [FAKTURI_D].[DOG_K] AS [DOG_K], 
+      [FAKTURI_D].[GOD_K] AS [GOD_K], 
+      [FAKTURI_D].[PLATENO] AS [PLATENO], 
+      [FAKTURI_D].[DATUMP] AS [DATUMP], 
+      [FAKTURI_D].[GL_SPISOK] AS [GL_SPISOK], 
+      [FAKTURI_D].[GOD_S] AS [GOD_S], 
+      [FAKTURI_D].[prazno] AS [prazno], 
+      [FAKTURI_D].[tempf] AS [tempf], 
+      [FAKTURI_D].[SEUSTE_NE] AS [SEUSTE_NE]
+      FROM [dbo].[FAKTURI_D] AS [FAKTURI_D]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FAKTURI_M" EntityType="MladinskaModel.Store.FAKTURI_M" store:Type="Tables" store:Schema="dbo" store:Name="FAKTURI_M">
+            <DefiningQuery>SELECT 
+      [FAKTURI_M].[BROJ] AS [BROJ], 
+      [FAKTURI_M].[GODINA] AS [GODINA], 
+      [FAKTURI_M].[DATUMF] AS [DATUMF], 
+      [FAKTURI_M].[NETO] AS [NETO], 
+      [FAKTURI_M].[HRANARINA] AS [HRANARINA], 
+      [FAKTURI_M].[PREVOZ] AS [PREVOZ], 
+      [FAKTURI_M].[PERS_STAPKA1] AS [PERS_STAPKA1], 
+      [FAKTURI_M].[PERSDANOK1] AS [PERSDANOK1], 
+      [FAKTURI_M].[PERS_STAPKA2] AS [PERS_STAPKA2], 
+      [FAKTURI_M].[PERSDANOK2] AS [PERSDANOK2], 
+      [FAKTURI_M].[PERS_STAPKA3] AS [PERS_STAPKA3], 
+      [FAKTURI_M].[PERSDANOK3] AS [PERSDANOK3], 
+      [FAKTURI_M].[PROVIZIJA] AS [PROVIZIJA], 
+      [FAKTURI_M].[AGENCIJA] AS [AGENCIJA], 
+      [FAKTURI_M].[DANOSN] AS [DANOSN], 
+      [FAKTURI_M].[STAPKA_DDV] AS [STAPKA_DDV], 
+      [FAKTURI_M].[IZNOSDDV] AS [IZNOSDDV], 
+      [FAKTURI_M].[BRUTO] AS [BRUTO], 
+      [FAKTURI_M].[IZNOSPIO] AS [IZNOSPIO], 
+      [FAKTURI_M].[PIO_STAPKA] AS [PIO_STAPKA], 
+      [FAKTURI_M].[TEKST] AS [TEKST], 
+      [FAKTURI_M].[PLATENO] AS [PLATENO], 
+      [FAKTURI_M].[DATUMP] AS [DATUMP], 
+      [FAKTURI_M].[GL_SPISOK] AS [GL_SPISOK], 
+      [FAKTURI_M].[GOD_S] AS [GOD_S], 
+      [FAKTURI_M].[DOG_K] AS [DOG_K], 
+      [FAKTURI_M].[GOD_K] AS [GOD_K], 
+      [FAKTURI_M].[prazno] AS [prazno], 
+      [FAKTURI_M].[tempf] AS [tempf], 
+      [FAKTURI_M].[SEUSTE_NE] AS [SEUSTE_NE], 
+      [FAKTURI_M].[PROSEK_RM] AS [PROSEK_RM]
+      FROM [dbo].[FAKTURI_M] AS [FAKTURI_M]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="NASELBI" EntityType="MladinskaModel.Store.NASELBI" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OBRAZ" EntityType="MladinskaModel.Store.OBRAZ" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ZANIMA" EntityType="MladinskaModel.Store.ZANIMA" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="BRAK">
+          <Key>
+            <PropertyRef Name="SIFRA" />
+          </Key>
+          <Property Name="SIFRA" Type="smallint" Nullable="false" />
+          <Property Name="OPIS" Type="char" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="CLENOVI_A">
+          <Key>
+            <PropertyRef Name="BROJ" />
+          </Key>
+          <Property Name="BROJ" Type="int" Nullable="false" />
+          <Property Name="PREZIMEIME" Type="char" MaxLength="50" />
+          <Property Name="ADRESA" Type="varchar" MaxLength="50" />
+          <Property Name="POL" Type="char" MaxLength="1" />
+          <Property Name="MB" Type="char" MaxLength="13" />
+          <Property Name="LICNAKARTA" Type="char" MaxLength="8" />
+          <Property Name="TELEFONI" Type="char" MaxLength="30" />
+          <Property Name="TEKOVNA" Type="char" MaxLength="18" />
+          <Property Name="BANKA" Type="char" MaxLength="30" />
+          <Property Name="DATUM_CLEN" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="CLENOVI_D">
+          <Key>
+            <PropertyRef Name="BROJ" />
+          </Key>
+          <Property Name="BROJ" Type="int" Nullable="false" />
+          <Property Name="PREZIMEIME" Type="char" MaxLength="50" />
+          <Property Name="ADRESA" Type="varchar" MaxLength="50" />
+          <Property Name="POL" Type="char" MaxLength="1" />
+          <Property Name="MB" Type="char" MaxLength="13" />
+          <Property Name="LICNAKARTA" Type="char" MaxLength="8" />
+          <Property Name="TELEFONI" Type="char" MaxLength="30" />
+          <Property Name="TEKOVNA" Type="char" MaxLength="18" />
+          <Property Name="BANKA" Type="char" MaxLength="30" />
+          <Property Name="DATUM_CLEN" Type="char" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Mladinska.dbo.CLENOVI_M' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="CLENOVI_M">
+          <Key>
+            <PropertyRef Name="BROJ" />
+          </Key>
+          <Property Name="BROJ" Type="int" Nullable="false" />
+          <Property Name="PREZIMEIME" Type="char" MaxLength="50" />
+          <Property Name="TATKOVO" Type="char" MaxLength="12" />
+          <Property Name="DATUMRAG" Type="char" MaxLength="10" />
+          <Property Name="LICNAKARTA" Type="char" MaxLength="8" />
+          <Property Name="MB" Type="char" MaxLength="13" />
+          <Property Name="OBRAZOVANIE" Type="smallint" />
+          <Property Name="ZANIMANJE" Type="int" />
+          <Property Name="DOPZANIMANJE" Type="int" />
+          <Property Name="ADRESA" Type="varchar" MaxLength="50" />
+          <Property Name="NASELBA" Type="smallint" />
+          <Property Name="POL" Type="char" MaxLength="1" />
+          <Property Name="DATUM_BIROV" Type="char" MaxLength="4" />
+          <Property Name="VOZACKA" Type="char" MaxLength="1" />
+          <Property Name="TELEFONI" Type="char" MaxLength="30" />
+          <Property Name="DATUM_CLENARINA" Type="char" MaxLength="4" />
+          <Property Name="DATUM_ZACLEN" Type="char" MaxLength="10" />
+          <Property Name="BRACNA" Type="smallint" />
+          <Property Name="ZABELESKA" Type="text" />
+          <Property Name="NASELBA_ICO" Type="char" MaxLength="20" />
+          <Property Name="ZAN_ICO" Type="char" MaxLength="40" />
+          <Property Name="DOPZAN_ICO" Type="char" MaxLength="40" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Mladinska.dbo.DOG_A' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="DOG_A">
+          <Key>
+            <PropertyRef Name="BROJ" />
+            <PropertyRef Name="GODINA" />
+          </Key>
+          <Property Name="BROJ" Type="int" Nullable="false" />
+          <Property Name="GODINA" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="TIPA" Type="char" MaxLength="1" />
+          <Property Name="DATUM" Type="char" MaxLength="10" />
+          <Property Name="OPISRABOTA" Type="text" />
+          <Property Name="OPISCLEN2" Type="text" />
+          <Property Name="DEJNOST" Type="smallint" />
+          <Property Name="PERSONALEN" Type="float" />
+          <Property Name="POPUST" Type="float" />
+          <Property Name="NETO" Type="float" />
+          <Property Name="BRUTO" Type="float" />
+          <Property Name="DAT_OD" Type="char" MaxLength="10" />
+          <Property Name="DAT_DO" Type="char" MaxLength="10" />
+          <Property Name="DOG_F" Type="int" />
+          <Property Name="GOD_F" Type="char" MaxLength="4" />
+          <Property Name="PROVIZIJA" Type="float" />
+          <Property Name="KRAJ" Type="smallint" />
+          <Property Name="prazno" Type="char" MaxLength="2" />
+          <Property Name="tempf" Type="float" />
+          <Property Name="MNOZI" Type="smallint" />
+          <Property Name="SOBIRAJ" Type="smallint" />
+          <Property Name="RABOTNIK1" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Mladinska.dbo.DOG_D' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="DOG_D">
+          <Key>
+            <PropertyRef Name="BROJ" />
+            <PropertyRef Name="GODINA" />
+          </Key>
+          <Property Name="BROJ" Type="int" Nullable="false" />
+          <Property Name="GODINA" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="TIPA" Type="char" MaxLength="1" />
+          <Property Name="DATUM" Type="char" MaxLength="10" />
+          <Property Name="OPISRABOTA" Type="text" />
+          <Property Name="OPISCLEN2" Type="text" />
+          <Property Name="PERSONALEN" Type="float" />
+          <Property Name="POPUST" Type="float" />
+          <Property Name="NETO" Type="float" />
+          <Property Name="BRUTO" Type="float" />
+          <Property Name="DAT_OD" Type="char" MaxLength="10" />
+          <Property Name="DAT_DO" Type="char" MaxLength="10" />
+          <Property Name="DOG_F" Type="int" />
+          <Property Name="GOD_F" Type="char" MaxLength="4" />
+          <Property Name="PROVIZIJA" Type="float" />
+          <Property Name="KRAJ" Type="smallint" />
+          <Property Name="prazno" Type="char" MaxLength="2" />
+          <Property Name="tempf" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Mladinska.dbo.DOG_F' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="DOG_F">
+          <Key>
+            <PropertyRef Name="BROJ" />
+            <PropertyRef Name="GODINA" />
+          </Key>
+          <Property Name="BROJ" Type="int" Nullable="false" />
+          <Property Name="GODINA" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="DATUM" Type="char" MaxLength="10" />
+          <Property Name="FIRMA" Type="varchar" MaxLength="80" />
+          <Property Name="KONTAKTLICE" Type="char" MaxLength="40" />
+          <Property Name="TELEFONI" Type="char" MaxLength="40" />
+          <Property Name="PROVIZIJA_M" Type="float" />
+          <Property Name="PROVIZIJA_A" Type="float" />
+          <Property Name="PROVIZIJA_D" Type="float" />
+          <Property Name="ZATVOREN" Type="smallint" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Mladinska.dbo.DOG_M' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="DOG_M">
+          <Key>
+            <PropertyRef Name="BROJ" />
+            <PropertyRef Name="GODINA" />
+          </Key>
+          <Property Name="BROJ" Type="int" Nullable="false" />
+          <Property Name="GODINA" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="DATUM" Type="char" MaxLength="10" />
+          <Property Name="OPISRABOTA" Type="int" />
+          <Property Name="SAATNINA" Type="float" />
+          <Property Name="CASOVI" Type="int" />
+          <Property Name="NETO" Type="float" />
+          <Property Name="BRUTO" Type="float" />
+          <Property Name="DAT_OD" Type="char" MaxLength="10" />
+          <Property Name="DAT_DO" Type="char" MaxLength="10" />
+          <Property Name="DOG_F" Type="int" />
+          <Property Name="GOD_F" Type="char" MaxLength="4" />
+          <Property Name="PROVIZIJA" Type="float" />
+          <Property Name="HRANARINA" Type="float" />
+          <Property Name="PREVOZ" Type="float" />
+          <Property Name="KRAJ" Type="smallint" />
+          <Property Name="prazno" Type="char" MaxLength="2" />
+          <Property Name="tempf" Type="float" />
+          <Property Name="PROSEK_RM" Type="float" />
+        </EntityType>
+        <EntityType Name="dtproperties">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="property" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="objectid" Type="int" />
+          <Property Name="property" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="value" Type="varchar" MaxLength="255" />
+          <Property Name="uvalue" Type="nvarchar" MaxLength="255" />
+          <Property Name="lvalue" Type="image" />
+          <Property Name="version" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Mladinska.dbo.FAK_DOG_A' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="FAK_DOG_A">
+          <Key>
+            <PropertyRef Name="BROJ_F" />
+            <PropertyRef Name="GODINA_F" />
+          </Key>
+          <Property Name="BROJ_F" Type="int" Nullable="false" />
+          <Property Name="GODINA_F" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="BROJ_A" Type="int" />
+          <Property Name="GODINA_A" Type="char" MaxLength="4" />
+          <Property Name="BRUTO" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Mladinska.dbo.FAK_DOG_D' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="FAK_DOG_D">
+          <Key>
+            <PropertyRef Name="BROJ_F" />
+            <PropertyRef Name="GODINA_F" />
+          </Key>
+          <Property Name="BROJ_F" Type="int" Nullable="false" />
+          <Property Name="GODINA_F" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="BROJ_A" Type="int" />
+          <Property Name="GODINA_A" Type="char" MaxLength="4" />
+          <Property Name="BRUTO" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Mladinska.dbo.FAK_DOG_M' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="FAK_DOG_M">
+          <Key>
+            <PropertyRef Name="BROJ_F" />
+            <PropertyRef Name="GODINA_F" />
+          </Key>
+          <Property Name="BROJ_F" Type="int" Nullable="false" />
+          <Property Name="GODINA_F" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="BROJ_A" Type="int" />
+          <Property Name="GODINA_A" Type="char" MaxLength="4" />
+          <Property Name="BRUTO" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Mladinska.dbo.FAKTURI_A' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="FAKTURI_A">
+          <Key>
+            <PropertyRef Name="BROJ" />
+            <PropertyRef Name="GODINA" />
+          </Key>
+          <Property Name="BROJ" Type="int" Nullable="false" />
+          <Property Name="GODINA" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="DATUMF" Type="char" MaxLength="10" />
+          <Property Name="NETO" Type="float" />
+          <Property Name="DANOSN" Type="float" />
+          <Property Name="PERSDANOK" Type="float" />
+          <Property Name="TROSOCI" Type="float" />
+          <Property Name="DDV_OSN" Type="float" />
+          <Property Name="DDV_IZN" Type="float" />
+          <Property Name="DDV_STAPKA" Type="float" />
+          <Property Name="PERS_STAPKA" Type="float" />
+          <Property Name="POPUST" Type="float" />
+          <Property Name="IZNOS" Type="float" />
+          <Property Name="TEKST" Type="text" />
+          <Property Name="PLATENO" Type="float" />
+          <Property Name="DATUMP" Type="char" MaxLength="10" />
+          <Property Name="GL_SPISOK" Type="int" />
+          <Property Name="GOD_S" Type="char" MaxLength="4" />
+          <Property Name="DOG_K" Type="int" />
+          <Property Name="GOD_K" Type="char" MaxLength="4" />
+          <Property Name="prazno" Type="char" MaxLength="2" />
+          <Property Name="tempf" Type="float" />
+          <Property Name="SEUSTE_NE" Type="smallint" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Mladinska.dbo.FAKTURI_D' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="FAKTURI_D">
+          <Key>
+            <PropertyRef Name="BROJ" />
+            <PropertyRef Name="GODINA" />
+          </Key>
+          <Property Name="BROJ" Type="int" Nullable="false" />
+          <Property Name="GODINA" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="DATUMF" Type="char" MaxLength="10" />
+          <Property Name="NETO" Type="float" />
+          <Property Name="DANOSN" Type="float" />
+          <Property Name="PERS_STAPKA1" Type="float" />
+          <Property Name="PERSDANOK1" Type="float" />
+          <Property Name="PERS_STAPKA2" Type="float" />
+          <Property Name="PERSDANOK2" Type="float" />
+          <Property Name="PERS_STAPKA3" Type="float" />
+          <Property Name="PERSDANOK3" Type="float" />
+          <Property Name="TROSOCI" Type="float" />
+          <Property Name="DDV_OSN" Type="float" />
+          <Property Name="DDV_IZN" Type="float" />
+          <Property Name="DDV_STAPKA" Type="float" />
+          <Property Name="IZNOS" Type="float" />
+          <Property Name="TEKST" Type="text" />
+          <Property Name="DOG_K" Type="int" />
+          <Property Name="GOD_K" Type="char" MaxLength="4" />
+          <Property Name="PLATENO" Type="float" />
+          <Property Name="DATUMP" Type="char" MaxLength="10" />
+          <Property Name="GL_SPISOK" Type="int" />
+          <Property Name="GOD_S" Type="char" MaxLength="4" />
+          <Property Name="prazno" Type="char" MaxLength="2" />
+          <Property Name="tempf" Type="float" />
+          <Property Name="SEUSTE_NE" Type="smallint" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Mladinska.dbo.FAKTURI_M' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="FAKTURI_M">
+          <Key>
+            <PropertyRef Name="BROJ" />
+            <PropertyRef Name="GODINA" />
+          </Key>
+          <Property Name="BROJ" Type="int" Nullable="false" />
+          <Property Name="GODINA" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="DATUMF" Type="char" MaxLength="10" />
+          <Property Name="NETO" Type="float" />
+          <Property Name="HRANARINA" Type="float" />
+          <Property Name="PREVOZ" Type="float" />
+          <Property Name="PERS_STAPKA1" Type="float" />
+          <Property Name="PERSDANOK1" Type="float" />
+          <Property Name="PERS_STAPKA2" Type="float" />
+          <Property Name="PERSDANOK2" Type="float" />
+          <Property Name="PERS_STAPKA3" Type="float" />
+          <Property Name="PERSDANOK3" Type="float" />
+          <Property Name="PROVIZIJA" Type="float" />
+          <Property Name="AGENCIJA" Type="float" />
+          <Property Name="DANOSN" Type="float" />
+          <Property Name="STAPKA_DDV" Type="float" />
+          <Property Name="IZNOSDDV" Type="float" />
+          <Property Name="BRUTO" Type="float" />
+          <Property Name="IZNOSPIO" Type="float" />
+          <Property Name="PIO_STAPKA" Type="float" />
+          <Property Name="TEKST" Type="text" />
+          <Property Name="PLATENO" Type="float" />
+          <Property Name="DATUMP" Type="char" MaxLength="10" />
+          <Property Name="GL_SPISOK" Type="int" />
+          <Property Name="GOD_S" Type="char" MaxLength="4" />
+          <Property Name="DOG_K" Type="int" />
+          <Property Name="GOD_K" Type="char" MaxLength="4" />
+          <Property Name="prazno" Type="char" MaxLength="2" />
+          <Property Name="tempf" Type="float" />
+          <Property Name="SEUSTE_NE" Type="smallint" />
+          <Property Name="PROSEK_RM" Type="float" />
+        </EntityType>
+        <EntityType Name="NASELBI">
+          <Key>
+            <PropertyRef Name="SIFRA" />
+          </Key>
+          <Property Name="SIFRA" Type="smallint" Nullable="false" />
+          <Property Name="OPIS" Type="char" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="OBRAZ">
+          <Key>
+            <PropertyRef Name="SIFRA" />
+          </Key>
+          <Property Name="SIFRA" Type="smallint" Nullable="false" />
+          <Property Name="OPIS" Type="char" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="ZANIMA">
+          <Key>
+            <PropertyRef Name="SIFRA" />
+          </Key>
+          <Property Name="SIFRA" Type="int" Nullable="false" />
+          <Property Name="OPIS" Type="char" MaxLength="30" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'Mladinska.dbo.DEJNOSTI' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="DEJNOSTI">
+        <Property Name="SIFRA" Type="smallint" />
+        <Property Name="POPUST" Type="float" />
+        <Property Name="OPIS" Type="text" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Mladinska.dbo.NEXTBROJ' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="NEXTBROJ">
+        <Property Name="BROJ" Type="int" />
+        <Property Name="ZAFATEN" Type="smallint" />
+        <Property Name="TIP" Type="char" MaxLength="1" />
+        <Property Name="RABGOD" Type="char" MaxLength="4" />
+        <Property Name="TIP2" Type="char" MaxLength="1" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Mladinska.dbo.OPISRABOTA' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="OPISRABOTA">
+        <Property Name="SIFRA" Type="int" />
+        <Property Name="OPIS" Type="char" MaxLength="30" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Mladinska.dbo.OVAFIRMA' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="OVAFIRMA">
+        <Property Name="NAZIV" Type="char" MaxLength="30" />
+        <Property Name="MB" Type="char" MaxLength="13" />
+        <Property Name="SMETKA" Type="char" MaxLength="18" />
+        <Property Name="BANKA" Type="char" MaxLength="30" />
+        <Property Name="DANOCEN" Type="char" MaxLength="13" />
+        <Property Name="ADRESA" Type="char" MaxLength="40" />
+        <Property Name="TELEFONI" Type="char" MaxLength="30" />
+        <Property Name="TELFAKS" Type="char" MaxLength="12" />
+        <Property Name="RABGOD" Type="char" MaxLength="4" />
+        <Property Name="DDV" Type="float" />
+        <Property Name="LEVA_MARGINA_D" Type="int" />
+        <Property Name="PERSA" Type="float" />
+        <Property Name="PERS1" Type="float" />
+        <Property Name="PERS2" Type="float" />
+        <Property Name="PERS3" Type="float" />
+        <Property Name="BRUTO1" Type="float" />
+        <Property Name="BRUTO2" Type="float" />
+        <Property Name="PIO" Type="float" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Mladinska.dbo.PARI_A' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="PARI_A">
+        <Property Name="BROJ" Type="int" />
+        <Property Name="GODINA" Type="char" MaxLength="4" />
+        <Property Name="TIPD" Type="char" MaxLength="1" />
+        <Property Name="DATUM" Type="char" MaxLength="10" />
+        <Property Name="REDBR" Type="smallint" />
+        <Property Name="RABOTNIK" Type="int" />
+        <Property Name="NUM1" Type="float" />
+        <Property Name="NUM2" Type="float" />
+        <Property Name="PROCENTUAL" Type="float" />
+        <Property Name="DATUM_S" Type="char" MaxLength="10" />
+        <Property Name="GL_SPISOK" Type="int" />
+        <Property Name="GOD_S" Type="char" MaxLength="4" />
+        <Property Name="SPISOK" Type="smallint" />
+        <Property Name="DIREKTOR" Type="char" MaxLength="25" />
+        <Property Name="DANOSN" Type="float" />
+        <Property Name="PERSDANOK" Type="float" />
+        <Property Name="TROSOCI" Type="float" />
+        <Property Name="DDV_OSN" Type="float" />
+        <Property Name="DDV_IZN" Type="float" />
+        <Property Name="DDV_STAPKA" Type="float" />
+        <Property Name="PERS_STAPKA" Type="float" />
+        <Property Name="POPUST" Type="float" />
+        <Property Name="IZNOS" Type="float" />
+        <Property Name="BROJF" Type="int" />
+        <Property Name="GODINAF" Type="char" MaxLength="4" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Mladinska.dbo.PARI_D' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="PARI_D">
+        <Property Name="BROJ" Type="int" />
+        <Property Name="GODINA" Type="char" MaxLength="4" />
+        <Property Name="TIPD" Type="char" MaxLength="1" />
+        <Property Name="DATUM" Type="char" MaxLength="10" />
+        <Property Name="REDBR" Type="smallint" />
+        <Property Name="RABOTNIK" Type="int" />
+        <Property Name="NUM1" Type="float" />
+        <Property Name="NUM2" Type="float" />
+        <Property Name="PROCENTUAL" Type="float" />
+        <Property Name="DATUM_S" Type="char" MaxLength="10" />
+        <Property Name="GL_SPISOK" Type="int" />
+        <Property Name="GOD_S" Type="char" MaxLength="4" />
+        <Property Name="SPISOK" Type="smallint" />
+        <Property Name="DIREKTOR" Type="char" MaxLength="25" />
+        <Property Name="PERS_STAPKA1" Type="float" />
+        <Property Name="PERSDANOK1" Type="float" />
+        <Property Name="PERS_STAPKA2" Type="float" />
+        <Property Name="PERSDANOK2" Type="float" />
+        <Property Name="PERS_STAPKA3" Type="float" />
+        <Property Name="PERSDANOK3" Type="float" />
+        <Property Name="TROSOCI" Type="float" />
+        <Property Name="DDV_OSN" Type="float" />
+        <Property Name="DDV_IZN" Type="float" />
+        <Property Name="DDV_STAPKA" Type="float" />
+        <Property Name="IZNOS" Type="float" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Mladinska.dbo.PARI_M' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="PARI_M">
+        <Property Name="BROJ" Type="int" />
+        <Property Name="GODINA" Type="char" MaxLength="4" />
+        <Property Name="TIPD" Type="char" MaxLength="1" />
+        <Property Name="DATUM" Type="char" MaxLength="10" />
+        <Property Name="REDBR" Type="smallint" />
+        <Property Name="RABOTNIK" Type="int" />
+        <Property Name="NUM1" Type="float" />
+        <Property Name="NUM2" Type="float" />
+        <Property Name="PROCENTUAL" Type="float" />
+        <Property Name="DATUM_S" Type="char" MaxLength="10" />
+        <Property Name="GL_SPISOK" Type="int" />
+        <Property Name="GOD_S" Type="char" MaxLength="4" />
+        <Property Name="SPISOK" Type="smallint" />
+        <Property Name="DIREKTOR" Type="char" MaxLength="25" />
+        <Property Name="HRANARINA" Type="float" />
+        <Property Name="PREVOZ" Type="float" />
+        <Property Name="PERS_STAPKA1" Type="float" />
+        <Property Name="PERSDANOK1" Type="float" />
+        <Property Name="PERS_STAPKA2" Type="float" />
+        <Property Name="PERSDANOK2" Type="float" />
+        <Property Name="PERS_STAPKA3" Type="float" />
+        <Property Name="PERSDANOK3" Type="float" />
+        <Property Name="BRUTO" Type="float" />
+        <Property Name="AGENCIJA" Type="float" />
+        <Property Name="DANOSN" Type="float" />
+        <Property Name="STAPKA_DDV" Type="float" />
+        <Property Name="IZNOSDDV" Type="float" />
+        <Property Name="IZNOSPIO" Type="float" />
+        <Property Name="PIO_STAPKA" Type="float" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Mladinska.dbo.PPD_GI' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="PPD_GI">
+        <Property Name="RABOTNIK" Type="int" />
+        <Property Name="MB" Type="char" MaxLength="13" />
+        <Property Name="PREZIMEIME" Type="char" MaxLength="50" />
+        <Property Name="GOD_S" Type="char" MaxLength="4" />
+        <Property Name="TIP" Type="char" MaxLength="1" />
+        <Property Name="NETO" Type="float" />
+        <Property Name="PERSDANOK" Type="float" />
+        <Property Name="BRUTO" Type="float" />
+        <Property Name="PRIZNATITR" Type="float" />
+        <Property Name="ARHIVIRANO" Type="smallint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Mladinska.dbo.PredSpisok' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="PredSpisok">
+        <Property Name="BROJ" Type="int" />
+        <Property Name="GODINA" Type="char" MaxLength="4" />
+        <Property Name="TIPD" Type="char" MaxLength="1" />
+        <Property Name="DATUM" Type="char" MaxLength="10" />
+        <Property Name="REDBR" Type="smallint" />
+        <Property Name="RABOTNIK" Type="int" />
+        <Property Name="NUM1" Type="float" />
+        <Property Name="NUM2" Type="float" />
+        <Property Name="STANICA" Type="smallint" />
+        <Property Name="BROJF" Type="int" />
+        <Property Name="GODINAF" Type="char" MaxLength="4" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Mladinska.dbo.tmpSpisok' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="tmpSpisok">
+        <Property Name="BROJ" Type="int" />
+        <Property Name="GODINA" Type="char" MaxLength="4" />
+        <Property Name="TIPD" Type="char" MaxLength="1" />
+        <Property Name="DATUM" Type="char" MaxLength="10" />
+        <Property Name="REDBR" Type="smallint" />
+        <Property Name="RABOTNIK" Type="int" />
+        <Property Name="NUM1" Type="float" />
+        <Property Name="NUM2" Type="float" />
+        <Property Name="STANICA" Type="smallint" />
+        <Property Name="SPISOK" Type="smallint" />
+        <Property Name="GL_SPISOK" Type="int" />
+        <Property Name="GODINA_S" Type="char" MaxLength="4" />
+        <Property Name="DATUM_S" Type="char" MaxLength="10" />
+        <Property Name="BROJF" Type="int" />
+        <Property Name="GODINAF" Type="char" MaxLength="4" />
+      </EntityType>-->
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MladinskaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="MladinskaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BRAK" EntityType="MladinskaModel.BRAK" />
+          <EntitySet Name="CLENOVI_A" EntityType="MladinskaModel.CLENOVI_A" />
+          <EntitySet Name="CLENOVI_D" EntityType="MladinskaModel.CLENOVI_D" />
+          <EntitySet Name="CLENOVI_M" EntityType="MladinskaModel.CLENOVI_M" />
+          <EntitySet Name="DOG_F" EntityType="MladinskaModel.DOG_F" />
+          <EntitySet Name="dtproperties" EntityType="MladinskaModel.dtproperties" />
+          <EntitySet Name="NASELBI" EntityType="MladinskaModel.NASELBI" />
+          <EntitySet Name="OBRAZ" EntityType="MladinskaModel.OBRAZ" />
+          <EntitySet Name="ZANIMA" EntityType="MladinskaModel.ZANIMA" />
+          <EntitySet Name="DOG_A" EntityType="MladinskaModel.DOG_A" />
+          <EntitySet Name="DOG_D" EntityType="MladinskaModel.DOG_D" />
+          <EntitySet Name="DOG_M" EntityType="MladinskaModel.DOG_M" />
+          <EntitySet Name="FAK_DOG_A" EntityType="MladinskaModel.FAK_DOG_A" />
+          <EntitySet Name="FAK_DOG_D" EntityType="MladinskaModel.FAK_DOG_D" />
+          <EntitySet Name="FAK_DOG_M" EntityType="MladinskaModel.FAK_DOG_M" />
+          <EntitySet Name="FAKTURI_A" EntityType="MladinskaModel.FAKTURI_A" />
+          <EntitySet Name="FAKTURI_D" EntityType="MladinskaModel.FAKTURI_D" />
+          <EntitySet Name="FAKTURI_M" EntityType="MladinskaModel.FAKTURI_M" />
+        </EntityContainer>
+        <EntityType Name="BRAK">
+          <Key>
+            <PropertyRef Name="SIFRA" />
+          </Key>
+          <Property Name="SIFRA" Type="Int16" Nullable="false" />
+          <Property Name="OPIS" Type="String" MaxLength="15" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="CLENOVI_A">
+          <Key>
+            <PropertyRef Name="BROJ" />
+          </Key>
+          <Property Name="BROJ" Type="Int32" Nullable="false" />
+          <Property Name="PREZIMEIME" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="ADRESA" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="POL" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="MB" Type="String" MaxLength="13" Unicode="false" FixedLength="true" />
+          <Property Name="LICNAKARTA" Type="String" MaxLength="8" Unicode="false" FixedLength="true" />
+          <Property Name="TELEFONI" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="TEKOVNA" Type="String" MaxLength="18" Unicode="false" FixedLength="true" />
+          <Property Name="BANKA" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="DATUM_CLEN" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="CLENOVI_D">
+          <Key>
+            <PropertyRef Name="BROJ" />
+          </Key>
+          <Property Name="BROJ" Type="Int32" Nullable="false" />
+          <Property Name="PREZIMEIME" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="ADRESA" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="POL" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="MB" Type="String" MaxLength="13" Unicode="false" FixedLength="true" />
+          <Property Name="LICNAKARTA" Type="String" MaxLength="8" Unicode="false" FixedLength="true" />
+          <Property Name="TELEFONI" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="TEKOVNA" Type="String" MaxLength="18" Unicode="false" FixedLength="true" />
+          <Property Name="BANKA" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="DATUM_CLEN" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="CLENOVI_M">
+          <Key>
+            <PropertyRef Name="BROJ" />
+          </Key>
+          <Property Name="BROJ" Type="Int32" Nullable="false" />
+          <Property Name="PREZIMEIME" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="TATKOVO" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+          <Property Name="DATUMRAG" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="LICNAKARTA" Type="String" MaxLength="8" Unicode="false" FixedLength="true" />
+          <Property Name="MB" Type="String" MaxLength="13" Unicode="false" FixedLength="true" />
+          <Property Name="OBRAZOVANIE" Type="Int16" />
+          <Property Name="ZANIMANJE" Type="Int32" />
+          <Property Name="DOPZANIMANJE" Type="Int32" />
+          <Property Name="ADRESA" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="NASELBA" Type="Int16" />
+          <Property Name="POL" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="DATUM_BIROV" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="VOZACKA" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="TELEFONI" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="DATUM_CLENARINA" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="DATUM_ZACLEN" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="BRACNA" Type="Int16" />
+          <Property Name="ZABELESKA" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="NASELBA_ICO" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="ZAN_ICO" Type="String" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="DOPZAN_ICO" Type="String" MaxLength="40" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="DOG_F">
+          <Key>
+            <PropertyRef Name="BROJ" />
+            <PropertyRef Name="GODINA" />
+          </Key>
+          <Property Name="BROJ" Type="Int32" Nullable="false" />
+          <Property Name="GODINA" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="DATUM" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="FIRMA" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="KONTAKTLICE" Type="String" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="TELEFONI" Type="String" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="PROVIZIJA_M" Type="Double" />
+          <Property Name="PROVIZIJA_A" Type="Double" />
+          <Property Name="PROVIZIJA_D" Type="Double" />
+          <Property Name="ZATVOREN" Type="Int16" />
+        </EntityType>
+        <EntityType Name="dtproperties">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="property" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="objectid" Type="Int32" />
+          <Property Name="property" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="value" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="uvalue" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="lvalue" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="version" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NASELBI">
+          <Key>
+            <PropertyRef Name="SIFRA" />
+          </Key>
+          <Property Name="SIFRA" Type="Int16" Nullable="false" />
+          <Property Name="OPIS" Type="String" MaxLength="15" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="OBRAZ">
+          <Key>
+            <PropertyRef Name="SIFRA" />
+          </Key>
+          <Property Name="SIFRA" Type="Int16" Nullable="false" />
+          <Property Name="OPIS" Type="String" MaxLength="15" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="ZANIMA">
+          <Key>
+            <PropertyRef Name="SIFRA" />
+          </Key>
+          <Property Name="SIFRA" Type="Int32" Nullable="false" />
+          <Property Name="OPIS" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="DOG_A">
+          <Key>
+            <PropertyRef Name="BROJ" />
+            <PropertyRef Name="GODINA" />
+          </Key>
+          <Property Type="Int32" Name="BROJ" Nullable="false" />
+          <Property Type="String" Name="GODINA" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="TIPA" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="DATUM" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="OPISRABOTA" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OPISCLEN2" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="DEJNOST" />
+          <Property Type="Double" Name="PERSONALEN" />
+          <Property Type="Double" Name="POPUST" />
+          <Property Type="Double" Name="NETO" />
+          <Property Type="Double" Name="BRUTO" />
+          <Property Type="String" Name="DAT_OD" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="DAT_DO" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="DOG_F" />
+          <Property Type="String" Name="GOD_F" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="PROVIZIJA" />
+          <Property Type="Int16" Name="KRAJ" />
+          <Property Type="String" Name="prazno" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="tempf" />
+          <Property Type="Int16" Name="MNOZI" />
+          <Property Type="Int16" Name="SOBIRAJ" />
+          <Property Type="Int32" Name="RABOTNIK1" />
+        </EntityType>
+        <EntityType Name="DOG_D">
+          <Key>
+            <PropertyRef Name="BROJ" />
+            <PropertyRef Name="GODINA" />
+          </Key>
+          <Property Type="Int32" Name="BROJ" Nullable="false" />
+          <Property Type="String" Name="GODINA" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="TIPA" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="DATUM" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="OPISRABOTA" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OPISCLEN2" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="PERSONALEN" />
+          <Property Type="Double" Name="POPUST" />
+          <Property Type="Double" Name="NETO" />
+          <Property Type="Double" Name="BRUTO" />
+          <Property Type="String" Name="DAT_OD" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="DAT_DO" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="DOG_F" />
+          <Property Type="String" Name="GOD_F" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="PROVIZIJA" />
+          <Property Type="Int16" Name="KRAJ" />
+          <Property Type="String" Name="prazno" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="tempf" />
+        </EntityType>
+        <EntityType Name="DOG_M">
+          <Key>
+            <PropertyRef Name="BROJ" />
+            <PropertyRef Name="GODINA" />
+          </Key>
+          <Property Type="Int32" Name="BROJ" Nullable="false" />
+          <Property Type="String" Name="GODINA" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="DATUM" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="OPISRABOTA" />
+          <Property Type="Double" Name="SAATNINA" />
+          <Property Type="Int32" Name="CASOVI" />
+          <Property Type="Double" Name="NETO" />
+          <Property Type="Double" Name="BRUTO" />
+          <Property Type="String" Name="DAT_OD" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="DAT_DO" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="DOG_F" />
+          <Property Type="String" Name="GOD_F" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="PROVIZIJA" />
+          <Property Type="Double" Name="HRANARINA" />
+          <Property Type="Double" Name="PREVOZ" />
+          <Property Type="Int16" Name="KRAJ" />
+          <Property Type="String" Name="prazno" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="tempf" />
+          <Property Type="Double" Name="PROSEK_RM" />
+        </EntityType>
+        <EntityType Name="FAK_DOG_A">
+          <Key>
+            <PropertyRef Name="BROJ_F" />
+            <PropertyRef Name="GODINA_F" />
+          </Key>
+          <Property Type="Int32" Name="BROJ_F" Nullable="false" />
+          <Property Type="String" Name="GODINA_F" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="BROJ_A" />
+          <Property Type="String" Name="GODINA_A" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="BRUTO" />
+        </EntityType>
+        <EntityType Name="FAK_DOG_D">
+          <Key>
+            <PropertyRef Name="BROJ_F" />
+            <PropertyRef Name="GODINA_F" />
+          </Key>
+          <Property Type="Int32" Name="BROJ_F" Nullable="false" />
+          <Property Type="String" Name="GODINA_F" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="BROJ_A" />
+          <Property Type="String" Name="GODINA_A" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="BRUTO" />
+        </EntityType>
+        <EntityType Name="FAK_DOG_M">
+          <Key>
+            <PropertyRef Name="BROJ_F" />
+            <PropertyRef Name="GODINA_F" />
+          </Key>
+          <Property Type="Int32" Name="BROJ_F" Nullable="false" />
+          <Property Type="String" Name="GODINA_F" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="BROJ_A" />
+          <Property Type="String" Name="GODINA_A" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="BRUTO" />
+        </EntityType>
+        <EntityType Name="FAKTURI_A">
+          <Key>
+            <PropertyRef Name="BROJ" />
+            <PropertyRef Name="GODINA" />
+          </Key>
+          <Property Type="Int32" Name="BROJ" Nullable="false" />
+          <Property Type="String" Name="GODINA" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="DATUMF" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="NETO" />
+          <Property Type="Double" Name="DANOSN" />
+          <Property Type="Double" Name="PERSDANOK" />
+          <Property Type="Double" Name="TROSOCI" />
+          <Property Type="Double" Name="DDV_OSN" />
+          <Property Type="Double" Name="DDV_IZN" />
+          <Property Type="Double" Name="DDV_STAPKA" />
+          <Property Type="Double" Name="PERS_STAPKA" />
+          <Property Type="Double" Name="POPUST" />
+          <Property Type="Double" Name="IZNOS" />
+          <Property Type="String" Name="TEKST" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="PLATENO" />
+          <Property Type="String" Name="DATUMP" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="GL_SPISOK" />
+          <Property Type="String" Name="GOD_S" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="DOG_K" />
+          <Property Type="String" Name="GOD_K" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="prazno" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="tempf" />
+          <Property Type="Int16" Name="SEUSTE_NE" />
+        </EntityType>
+        <EntityType Name="FAKTURI_D">
+          <Key>
+            <PropertyRef Name="BROJ" />
+            <PropertyRef Name="GODINA" />
+          </Key>
+          <Property Type="Int32" Name="BROJ" Nullable="false" />
+          <Property Type="String" Name="GODINA" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="DATUMF" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="NETO" />
+          <Property Type="Double" Name="DANOSN" />
+          <Property Type="Double" Name="PERS_STAPKA1" />
+          <Property Type="Double" Name="PERSDANOK1" />
+          <Property Type="Double" Name="PERS_STAPKA2" />
+          <Property Type="Double" Name="PERSDANOK2" />
+          <Property Type="Double" Name="PERS_STAPKA3" />
+          <Property Type="Double" Name="PERSDANOK3" />
+          <Property Type="Double" Name="TROSOCI" />
+          <Property Type="Double" Name="DDV_OSN" />
+          <Property Type="Double" Name="DDV_IZN" />
+          <Property Type="Double" Name="DDV_STAPKA" />
+          <Property Type="Double" Name="IZNOS" />
+          <Property Type="String" Name="TEKST" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="DOG_K" />
+          <Property Type="String" Name="GOD_K" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="PLATENO" />
+          <Property Type="String" Name="DATUMP" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="GL_SPISOK" />
+          <Property Type="String" Name="GOD_S" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="prazno" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="tempf" />
+          <Property Type="Int16" Name="SEUSTE_NE" />
+        </EntityType>
+        <EntityType Name="FAKTURI_M">
+          <Key>
+            <PropertyRef Name="BROJ" />
+            <PropertyRef Name="GODINA" />
+          </Key>
+          <Property Type="Int32" Name="BROJ" Nullable="false" />
+          <Property Type="String" Name="GODINA" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="DATUMF" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="NETO" />
+          <Property Type="Double" Name="HRANARINA" />
+          <Property Type="Double" Name="PREVOZ" />
+          <Property Type="Double" Name="PERS_STAPKA1" />
+          <Property Type="Double" Name="PERSDANOK1" />
+          <Property Type="Double" Name="PERS_STAPKA2" />
+          <Property Type="Double" Name="PERSDANOK2" />
+          <Property Type="Double" Name="PERS_STAPKA3" />
+          <Property Type="Double" Name="PERSDANOK3" />
+          <Property Type="Double" Name="PROVIZIJA" />
+          <Property Type="Double" Name="AGENCIJA" />
+          <Property Type="Double" Name="DANOSN" />
+          <Property Type="Double" Name="STAPKA_DDV" />
+          <Property Type="Double" Name="IZNOSDDV" />
+          <Property Type="Double" Name="BRUTO" />
+          <Property Type="Double" Name="IZNOSPIO" />
+          <Property Type="Double" Name="PIO_STAPKA" />
+          <Property Type="String" Name="TEKST" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="PLATENO" />
+          <Property Type="String" Name="DATUMP" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="GL_SPISOK" />
+          <Property Type="String" Name="GOD_S" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="DOG_K" />
+          <Property Type="String" Name="GOD_K" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="prazno" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="tempf" />
+          <Property Type="Int16" Name="SEUSTE_NE" />
+          <Property Type="Double" Name="PROSEK_RM" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MladinskaModelStoreContainer" CdmEntityContainer="MladinskaEntities">
+          <EntitySetMapping Name="BRAK"><EntityTypeMapping TypeName="MladinskaModel.BRAK"><MappingFragment StoreEntitySet="BRAK">
+            <ScalarProperty Name="SIFRA" ColumnName="SIFRA" />
+            <ScalarProperty Name="OPIS" ColumnName="OPIS" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CLENOVI_A"><EntityTypeMapping TypeName="MladinskaModel.CLENOVI_A"><MappingFragment StoreEntitySet="CLENOVI_A">
+            <ScalarProperty Name="BROJ" ColumnName="BROJ" />
+            <ScalarProperty Name="PREZIMEIME" ColumnName="PREZIMEIME" />
+            <ScalarProperty Name="ADRESA" ColumnName="ADRESA" />
+            <ScalarProperty Name="POL" ColumnName="POL" />
+            <ScalarProperty Name="MB" ColumnName="MB" />
+            <ScalarProperty Name="LICNAKARTA" ColumnName="LICNAKARTA" />
+            <ScalarProperty Name="TELEFONI" ColumnName="TELEFONI" />
+            <ScalarProperty Name="TEKOVNA" ColumnName="TEKOVNA" />
+            <ScalarProperty Name="BANKA" ColumnName="BANKA" />
+            <ScalarProperty Name="DATUM_CLEN" ColumnName="DATUM_CLEN" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CLENOVI_D"><EntityTypeMapping TypeName="MladinskaModel.CLENOVI_D"><MappingFragment StoreEntitySet="CLENOVI_D">
+            <ScalarProperty Name="BROJ" ColumnName="BROJ" />
+            <ScalarProperty Name="PREZIMEIME" ColumnName="PREZIMEIME" />
+            <ScalarProperty Name="ADRESA" ColumnName="ADRESA" />
+            <ScalarProperty Name="POL" ColumnName="POL" />
+            <ScalarProperty Name="MB" ColumnName="MB" />
+            <ScalarProperty Name="LICNAKARTA" ColumnName="LICNAKARTA" />
+            <ScalarProperty Name="TELEFONI" ColumnName="TELEFONI" />
+            <ScalarProperty Name="TEKOVNA" ColumnName="TEKOVNA" />
+            <ScalarProperty Name="BANKA" ColumnName="BANKA" />
+            <ScalarProperty Name="DATUM_CLEN" ColumnName="DATUM_CLEN" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CLENOVI_M"><EntityTypeMapping TypeName="MladinskaModel.CLENOVI_M"><MappingFragment StoreEntitySet="CLENOVI_M">
+            <ScalarProperty Name="BROJ" ColumnName="BROJ" />
+            <ScalarProperty Name="PREZIMEIME" ColumnName="PREZIMEIME" />
+            <ScalarProperty Name="TATKOVO" ColumnName="TATKOVO" />
+            <ScalarProperty Name="DATUMRAG" ColumnName="DATUMRAG" />
+            <ScalarProperty Name="LICNAKARTA" ColumnName="LICNAKARTA" />
+            <ScalarProperty Name="MB" ColumnName="MB" />
+            <ScalarProperty Name="OBRAZOVANIE" ColumnName="OBRAZOVANIE" />
+            <ScalarProperty Name="ZANIMANJE" ColumnName="ZANIMANJE" />
+            <ScalarProperty Name="DOPZANIMANJE" ColumnName="DOPZANIMANJE" />
+            <ScalarProperty Name="ADRESA" ColumnName="ADRESA" />
+            <ScalarProperty Name="NASELBA" ColumnName="NASELBA" />
+            <ScalarProperty Name="POL" ColumnName="POL" />
+            <ScalarProperty Name="DATUM_BIROV" ColumnName="DATUM_BIROV" />
+            <ScalarProperty Name="VOZACKA" ColumnName="VOZACKA" />
+            <ScalarProperty Name="TELEFONI" ColumnName="TELEFONI" />
+            <ScalarProperty Name="DATUM_CLENARINA" ColumnName="DATUM_CLENARINA" />
+            <ScalarProperty Name="DATUM_ZACLEN" ColumnName="DATUM_ZACLEN" />
+            <ScalarProperty Name="BRACNA" ColumnName="BRACNA" />
+            <ScalarProperty Name="ZABELESKA" ColumnName="ZABELESKA" />
+            <ScalarProperty Name="NASELBA_ICO" ColumnName="NASELBA_ICO" />
+            <ScalarProperty Name="ZAN_ICO" ColumnName="ZAN_ICO" />
+            <ScalarProperty Name="DOPZAN_ICO" ColumnName="DOPZAN_ICO" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DOG_F"><EntityTypeMapping TypeName="MladinskaModel.DOG_F"><MappingFragment StoreEntitySet="DOG_F">
+            <ScalarProperty Name="BROJ" ColumnName="BROJ" />
+            <ScalarProperty Name="GODINA" ColumnName="GODINA" />
+            <ScalarProperty Name="DATUM" ColumnName="DATUM" />
+            <ScalarProperty Name="FIRMA" ColumnName="FIRMA" />
+            <ScalarProperty Name="KONTAKTLICE" ColumnName="KONTAKTLICE" />
+            <ScalarProperty Name="TELEFONI" ColumnName="TELEFONI" />
+            <ScalarProperty Name="PROVIZIJA_M" ColumnName="PROVIZIJA_M" />
+            <ScalarProperty Name="PROVIZIJA_A" ColumnName="PROVIZIJA_A" />
+            <ScalarProperty Name="PROVIZIJA_D" ColumnName="PROVIZIJA_D" />
+            <ScalarProperty Name="ZATVOREN" ColumnName="ZATVOREN" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="dtproperties"><EntityTypeMapping TypeName="MladinskaModel.dtproperties"><MappingFragment StoreEntitySet="dtproperties">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="objectid" ColumnName="objectid" />
+            <ScalarProperty Name="property" ColumnName="property" />
+            <ScalarProperty Name="value" ColumnName="value" />
+            <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+            <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+            <ScalarProperty Name="version" ColumnName="version" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="NASELBI"><EntityTypeMapping TypeName="MladinskaModel.NASELBI"><MappingFragment StoreEntitySet="NASELBI">
+            <ScalarProperty Name="SIFRA" ColumnName="SIFRA" />
+            <ScalarProperty Name="OPIS" ColumnName="OPIS" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="OBRAZ"><EntityTypeMapping TypeName="MladinskaModel.OBRAZ"><MappingFragment StoreEntitySet="OBRAZ">
+            <ScalarProperty Name="SIFRA" ColumnName="SIFRA" />
+            <ScalarProperty Name="OPIS" ColumnName="OPIS" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ZANIMA"><EntityTypeMapping TypeName="MladinskaModel.ZANIMA"><MappingFragment StoreEntitySet="ZANIMA">
+            <ScalarProperty Name="SIFRA" ColumnName="SIFRA" />
+            <ScalarProperty Name="OPIS" ColumnName="OPIS" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DOG_A">
+            <EntityTypeMapping TypeName="MladinskaModel.DOG_A">
+              <MappingFragment StoreEntitySet="DOG_A">
+                <ScalarProperty Name="RABOTNIK1" ColumnName="RABOTNIK1" />
+                <ScalarProperty Name="SOBIRAJ" ColumnName="SOBIRAJ" />
+                <ScalarProperty Name="MNOZI" ColumnName="MNOZI" />
+                <ScalarProperty Name="tempf" ColumnName="tempf" />
+                <ScalarProperty Name="prazno" ColumnName="prazno" />
+                <ScalarProperty Name="KRAJ" ColumnName="KRAJ" />
+                <ScalarProperty Name="PROVIZIJA" ColumnName="PROVIZIJA" />
+                <ScalarProperty Name="GOD_F" ColumnName="GOD_F" />
+                <ScalarProperty Name="DOG_F" ColumnName="DOG_F" />
+                <ScalarProperty Name="DAT_DO" ColumnName="DAT_DO" />
+                <ScalarProperty Name="DAT_OD" ColumnName="DAT_OD" />
+                <ScalarProperty Name="BRUTO" ColumnName="BRUTO" />
+                <ScalarProperty Name="NETO" ColumnName="NETO" />
+                <ScalarProperty Name="POPUST" ColumnName="POPUST" />
+                <ScalarProperty Name="PERSONALEN" ColumnName="PERSONALEN" />
+                <ScalarProperty Name="DEJNOST" ColumnName="DEJNOST" />
+                <ScalarProperty Name="OPISCLEN2" ColumnName="OPISCLEN2" />
+                <ScalarProperty Name="OPISRABOTA" ColumnName="OPISRABOTA" />
+                <ScalarProperty Name="DATUM" ColumnName="DATUM" />
+                <ScalarProperty Name="TIPA" ColumnName="TIPA" />
+                <ScalarProperty Name="GODINA" ColumnName="GODINA" />
+                <ScalarProperty Name="BROJ" ColumnName="BROJ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DOG_D">
+            <EntityTypeMapping TypeName="MladinskaModel.DOG_D">
+              <MappingFragment StoreEntitySet="DOG_D">
+                <ScalarProperty Name="tempf" ColumnName="tempf" />
+                <ScalarProperty Name="prazno" ColumnName="prazno" />
+                <ScalarProperty Name="KRAJ" ColumnName="KRAJ" />
+                <ScalarProperty Name="PROVIZIJA" ColumnName="PROVIZIJA" />
+                <ScalarProperty Name="GOD_F" ColumnName="GOD_F" />
+                <ScalarProperty Name="DOG_F" ColumnName="DOG_F" />
+                <ScalarProperty Name="DAT_DO" ColumnName="DAT_DO" />
+                <ScalarProperty Name="DAT_OD" ColumnName="DAT_OD" />
+                <ScalarProperty Name="BRUTO" ColumnName="BRUTO" />
+                <ScalarProperty Name="NETO" ColumnName="NETO" />
+                <ScalarProperty Name="POPUST" ColumnName="POPUST" />
+                <ScalarProperty Name="PERSONALEN" ColumnName="PERSONALEN" />
+                <ScalarProperty Name="OPISCLEN2" ColumnName="OPISCLEN2" />
+                <ScalarProperty Name="OPISRABOTA" ColumnName="OPISRABOTA" />
+                <ScalarProperty Name="DATUM" ColumnName="DATUM" />
+                <ScalarProperty Name="TIPA" ColumnName="TIPA" />
+                <ScalarProperty Name="GODINA" ColumnName="GODINA" />
+                <ScalarProperty Name="BROJ" ColumnName="BROJ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DOG_M">
+            <EntityTypeMapping TypeName="MladinskaModel.DOG_M">
+              <MappingFragment StoreEntitySet="DOG_M">
+                <ScalarProperty Name="PROSEK_RM" ColumnName="PROSEK_RM" />
+                <ScalarProperty Name="tempf" ColumnName="tempf" />
+                <ScalarProperty Name="prazno" ColumnName="prazno" />
+                <ScalarProperty Name="KRAJ" ColumnName="KRAJ" />
+                <ScalarProperty Name="PREVOZ" ColumnName="PREVOZ" />
+                <ScalarProperty Name="HRANARINA" ColumnName="HRANARINA" />
+                <ScalarProperty Name="PROVIZIJA" ColumnName="PROVIZIJA" />
+                <ScalarProperty Name="GOD_F" ColumnName="GOD_F" />
+                <ScalarProperty Name="DOG_F" ColumnName="DOG_F" />
+                <ScalarProperty Name="DAT_DO" ColumnName="DAT_DO" />
+                <ScalarProperty Name="DAT_OD" ColumnName="DAT_OD" />
+                <ScalarProperty Name="BRUTO" ColumnName="BRUTO" />
+                <ScalarProperty Name="NETO" ColumnName="NETO" />
+                <ScalarProperty Name="CASOVI" ColumnName="CASOVI" />
+                <ScalarProperty Name="SAATNINA" ColumnName="SAATNINA" />
+                <ScalarProperty Name="OPISRABOTA" ColumnName="OPISRABOTA" />
+                <ScalarProperty Name="DATUM" ColumnName="DATUM" />
+                <ScalarProperty Name="GODINA" ColumnName="GODINA" />
+                <ScalarProperty Name="BROJ" ColumnName="BROJ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FAK_DOG_A">
+            <EntityTypeMapping TypeName="MladinskaModel.FAK_DOG_A">
+              <MappingFragment StoreEntitySet="FAK_DOG_A">
+                <ScalarProperty Name="BRUTO" ColumnName="BRUTO" />
+                <ScalarProperty Name="GODINA_A" ColumnName="GODINA_A" />
+                <ScalarProperty Name="BROJ_A" ColumnName="BROJ_A" />
+                <ScalarProperty Name="GODINA_F" ColumnName="GODINA_F" />
+                <ScalarProperty Name="BROJ_F" ColumnName="BROJ_F" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FAK_DOG_D">
+            <EntityTypeMapping TypeName="MladinskaModel.FAK_DOG_D">
+              <MappingFragment StoreEntitySet="FAK_DOG_D">
+                <ScalarProperty Name="BRUTO" ColumnName="BRUTO" />
+                <ScalarProperty Name="GODINA_A" ColumnName="GODINA_A" />
+                <ScalarProperty Name="BROJ_A" ColumnName="BROJ_A" />
+                <ScalarProperty Name="GODINA_F" ColumnName="GODINA_F" />
+                <ScalarProperty Name="BROJ_F" ColumnName="BROJ_F" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FAK_DOG_M">
+            <EntityTypeMapping TypeName="MladinskaModel.FAK_DOG_M">
+              <MappingFragment StoreEntitySet="FAK_DOG_M">
+                <ScalarProperty Name="BRUTO" ColumnName="BRUTO" />
+                <ScalarProperty Name="GODINA_A" ColumnName="GODINA_A" />
+                <ScalarProperty Name="BROJ_A" ColumnName="BROJ_A" />
+                <ScalarProperty Name="GODINA_F" ColumnName="GODINA_F" />
+                <ScalarProperty Name="BROJ_F" ColumnName="BROJ_F" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FAKTURI_A">
+            <EntityTypeMapping TypeName="MladinskaModel.FAKTURI_A">
+              <MappingFragment StoreEntitySet="FAKTURI_A">
+                <ScalarProperty Name="SEUSTE_NE" ColumnName="SEUSTE_NE" />
+                <ScalarProperty Name="tempf" ColumnName="tempf" />
+                <ScalarProperty Name="prazno" ColumnName="prazno" />
+                <ScalarProperty Name="GOD_K" ColumnName="GOD_K" />
+                <ScalarProperty Name="DOG_K" ColumnName="DOG_K" />
+                <ScalarProperty Name="GOD_S" ColumnName="GOD_S" />
+                <ScalarProperty Name="GL_SPISOK" ColumnName="GL_SPISOK" />
+                <ScalarProperty Name="DATUMP" ColumnName="DATUMP" />
+                <ScalarProperty Name="PLATENO" ColumnName="PLATENO" />
+                <ScalarProperty Name="TEKST" ColumnName="TEKST" />
+                <ScalarProperty Name="IZNOS" ColumnName="IZNOS" />
+                <ScalarProperty Name="POPUST" ColumnName="POPUST" />
+                <ScalarProperty Name="PERS_STAPKA" ColumnName="PERS_STAPKA" />
+                <ScalarProperty Name="DDV_STAPKA" ColumnName="DDV_STAPKA" />
+                <ScalarProperty Name="DDV_IZN" ColumnName="DDV_IZN" />
+                <ScalarProperty Name="DDV_OSN" ColumnName="DDV_OSN" />
+                <ScalarProperty Name="TROSOCI" ColumnName="TROSOCI" />
+                <ScalarProperty Name="PERSDANOK" ColumnName="PERSDANOK" />
+                <ScalarProperty Name="DANOSN" ColumnName="DANOSN" />
+                <ScalarProperty Name="NETO" ColumnName="NETO" />
+                <ScalarProperty Name="DATUMF" ColumnName="DATUMF" />
+                <ScalarProperty Name="GODINA" ColumnName="GODINA" />
+                <ScalarProperty Name="BROJ" ColumnName="BROJ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FAKTURI_D">
+            <EntityTypeMapping TypeName="MladinskaModel.FAKTURI_D">
+              <MappingFragment StoreEntitySet="FAKTURI_D">
+                <ScalarProperty Name="SEUSTE_NE" ColumnName="SEUSTE_NE" />
+                <ScalarProperty Name="tempf" ColumnName="tempf" />
+                <ScalarProperty Name="prazno" ColumnName="prazno" />
+                <ScalarProperty Name="GOD_S" ColumnName="GOD_S" />
+                <ScalarProperty Name="GL_SPISOK" ColumnName="GL_SPISOK" />
+                <ScalarProperty Name="DATUMP" ColumnName="DATUMP" />
+                <ScalarProperty Name="PLATENO" ColumnName="PLATENO" />
+                <ScalarProperty Name="GOD_K" ColumnName="GOD_K" />
+                <ScalarProperty Name="DOG_K" ColumnName="DOG_K" />
+                <ScalarProperty Name="TEKST" ColumnName="TEKST" />
+                <ScalarProperty Name="IZNOS" ColumnName="IZNOS" />
+                <ScalarProperty Name="DDV_STAPKA" ColumnName="DDV_STAPKA" />
+                <ScalarProperty Name="DDV_IZN" ColumnName="DDV_IZN" />
+                <ScalarProperty Name="DDV_OSN" ColumnName="DDV_OSN" />
+                <ScalarProperty Name="TROSOCI" ColumnName="TROSOCI" />
+                <ScalarProperty Name="PERSDANOK3" ColumnName="PERSDANOK3" />
+                <ScalarProperty Name="PERS_STAPKA3" ColumnName="PERS_STAPKA3" />
+                <ScalarProperty Name="PERSDANOK2" ColumnName="PERSDANOK2" />
+                <ScalarProperty Name="PERS_STAPKA2" ColumnName="PERS_STAPKA2" />
+                <ScalarProperty Name="PERSDANOK1" ColumnName="PERSDANOK1" />
+                <ScalarProperty Name="PERS_STAPKA1" ColumnName="PERS_STAPKA1" />
+                <ScalarProperty Name="DANOSN" ColumnName="DANOSN" />
+                <ScalarProperty Name="NETO" ColumnName="NETO" />
+                <ScalarProperty Name="DATUMF" ColumnName="DATUMF" />
+                <ScalarProperty Name="GODINA" ColumnName="GODINA" />
+                <ScalarProperty Name="BROJ" ColumnName="BROJ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FAKTURI_M">
+            <EntityTypeMapping TypeName="MladinskaModel.FAKTURI_M">
+              <MappingFragment StoreEntitySet="FAKTURI_M">
+                <ScalarProperty Name="PROSEK_RM" ColumnName="PROSEK_RM" />
+                <ScalarProperty Name="SEUSTE_NE" ColumnName="SEUSTE_NE" />
+                <ScalarProperty Name="tempf" ColumnName="tempf" />
+                <ScalarProperty Name="prazno" ColumnName="prazno" />
+                <ScalarProperty Name="GOD_K" ColumnName="GOD_K" />
+                <ScalarProperty Name="DOG_K" ColumnName="DOG_K" />
+                <ScalarProperty Name="GOD_S" ColumnName="GOD_S" />
+                <ScalarProperty Name="GL_SPISOK" ColumnName="GL_SPISOK" />
+                <ScalarProperty Name="DATUMP" ColumnName="DATUMP" />
+                <ScalarProperty Name="PLATENO" ColumnName="PLATENO" />
+                <ScalarProperty Name="TEKST" ColumnName="TEKST" />
+                <ScalarProperty Name="PIO_STAPKA" ColumnName="PIO_STAPKA" />
+                <ScalarProperty Name="IZNOSPIO" ColumnName="IZNOSPIO" />
+                <ScalarProperty Name="BRUTO" ColumnName="BRUTO" />
+                <ScalarProperty Name="IZNOSDDV" ColumnName="IZNOSDDV" />
+                <ScalarProperty Name="STAPKA_DDV" ColumnName="STAPKA_DDV" />
+                <ScalarProperty Name="DANOSN" ColumnName="DANOSN" />
+                <ScalarProperty Name="AGENCIJA" ColumnName="AGENCIJA" />
+                <ScalarProperty Name="PROVIZIJA" ColumnName="PROVIZIJA" />
+                <ScalarProperty Name="PERSDANOK3" ColumnName="PERSDANOK3" />
+                <ScalarProperty Name="PERS_STAPKA3" ColumnName="PERS_STAPKA3" />
+                <ScalarProperty Name="PERSDANOK2" ColumnName="PERSDANOK2" />
+                <ScalarProperty Name="PERS_STAPKA2" ColumnName="PERS_STAPKA2" />
+                <ScalarProperty Name="PERSDANOK1" ColumnName="PERSDANOK1" />
+                <ScalarProperty Name="PERS_STAPKA1" ColumnName="PERS_STAPKA1" />
+                <ScalarProperty Name="PREVOZ" ColumnName="PREVOZ" />
+                <ScalarProperty Name="HRANARINA" ColumnName="HRANARINA" />
+                <ScalarProperty Name="NETO" ColumnName="NETO" />
+                <ScalarProperty Name="DATUMF" ColumnName="DATUMF" />
+                <ScalarProperty Name="GODINA" ColumnName="GODINA" />
+                <ScalarProperty Name="BROJ" ColumnName="BROJ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Mladinska" ZoomLevel="52">
+        <EntityTypeShape EntityType="MladinskaModel.BRAK" Width="1.5" PointX="0.75" PointY="0.75" Height="1.4033821614583331" IsExpanded="true" />
+        <EntityTypeShape EntityType="MladinskaModel.CLENOVI_A" Width="1.5" PointX="2.75" PointY="0.75" Height="2.9417936197916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="MladinskaModel.CLENOVI_D" Width="1.5" PointX="4.75" PointY="0.75" Height="2.9417936197916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="MladinskaModel.CLENOVI_M" Width="1.5" PointX="0.75" PointY="4.75" Height="5.2494108072916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="MladinskaModel.DOG_F" Width="1.5" PointX="2.75" PointY="4.75" Height="2.9417936197916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="MladinskaModel.dtproperties" Width="1.5" PointX="4.75" PointY="4.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MladinskaModel.NASELBI" Width="1.5" PointX="6.75" PointY="0.75" Height="1.4033821614583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MladinskaModel.OBRAZ" Width="1.5" PointX="6.75" PointY="3.75" Height="1.4033821614583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MladinskaModel.ZANIMA" Width="1.5" PointX="6.75" PointY="6.75" Height="1.4033821614583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MladinskaModel.DOG_A" Width="1.5" PointX="3.375" PointY="8.75" Height="5.2494108072916674" />
+        <EntityTypeShape EntityType="MladinskaModel.DOG_D" Width="1.5" PointX="9.375" PointY="0.75" Height="4.4802050781250031" />
+        <EntityTypeShape EntityType="MladinskaModel.DOG_M" Width="1.5" PointX="5.75" PointY="9.75" Height="4.6725065104166674" />
+        <EntityTypeShape EntityType="MladinskaModel.FAK_DOG_A" Width="1.5" PointX="9.75" PointY="6.75" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="MladinskaModel.FAK_DOG_D" Width="1.5" PointX="7.75" PointY="9.75" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="MladinskaModel.FAK_DOG_M" Width="1.5" PointX="9.75" PointY="9.75" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="MladinskaModel.FAKTURI_A" Width="1.5" PointX="0.75" PointY="10.75" Height="5.4417122395833388" />
+        <EntityTypeShape EntityType="MladinskaModel.FAKTURI_D" Width="1.5" PointX="11.75" PointY="0.75" Height="6.0186165364583388" />
+        <EntityTypeShape EntityType="MladinskaModel.FAKTURI_M" Width="1.5" PointX="11.75" PointY="7.75" Height="6.9801236979166674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

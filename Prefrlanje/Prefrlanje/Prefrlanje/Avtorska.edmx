@@ -1,0 +1,1811 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AvtorskaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="AvtorskaModelStoreContainer">
+          <EntitySet Name="AvtorskiClenovi" EntityType="AvtorskaModel.Store.AvtorskiClenovi" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AvtorskiDogovor" EntityType="AvtorskaModel.Store.AvtorskiDogovor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Banka" EntityType="AvtorskaModel.Store.Banka" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Dejnosti" EntityType="AvtorskaModel.Store.Dejnosti" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DogovorNaDelo" EntityType="AvtorskaModel.Store.DogovorNaDelo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DogovorSoAvtor" EntityType="AvtorskaModel.Store.DogovorSoAvtor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DogovorSoIzveduvac" EntityType="AvtorskaModel.Store.DogovorSoIzveduvac" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Fakturi" EntityType="AvtorskaModel.Store.Fakturi" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FakturiAvtorskiDogovor" EntityType="AvtorskaModel.Store.FakturiAvtorskiDogovor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FakturiDogovorNaDelo" EntityType="AvtorskaModel.Store.FakturiDogovorNaDelo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Firma" EntityType="AvtorskaModel.Store.Firma" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="IstorijaPlakjanje" EntityType="AvtorskaModel.Store.IstorijaPlakjanje" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Izveduvaci" EntityType="AvtorskaModel.Store.Izveduvaci" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Korisnik" EntityType="AvtorskaModel.Store.Korisnik" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Naselbi" EntityType="AvtorskaModel.Store.Naselbi" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OvaaFirma" EntityType="AvtorskaModel.Store.OvaaFirma" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Pol" EntityType="AvtorskaModel.Store.Pol" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="AvtorskaModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ZiroSmetkaAvtor" EntityType="AvtorskaModel.Store.ZiroSmetkaAvtor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ZiroSmetkaIzveduvac" EntityType="AvtorskaModel.Store.ZiroSmetkaIzveduvac" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_AvtorskiClenovi_Naselbi" Association="AvtorskaModel.Store.FK_AvtorskiClenovi_Naselbi">
+            <End Role="Naselbi" EntitySet="Naselbi" />
+            <End Role="AvtorskiClenovi" EntitySet="AvtorskiClenovi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AvtorskiClenovi_Pol" Association="AvtorskaModel.Store.FK_AvtorskiClenovi_Pol">
+            <End Role="Pol" EntitySet="Pol" />
+            <End Role="AvtorskiClenovi" EntitySet="AvtorskiClenovi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AvtorskiDogovor_Dejnosti" Association="AvtorskaModel.Store.FK_AvtorskiDogovor_Dejnosti">
+            <End Role="Dejnosti" EntitySet="Dejnosti" />
+            <End Role="AvtorskiDogovor" EntitySet="AvtorskiDogovor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AvtorskiDogovor_Firma" Association="AvtorskaModel.Store.FK_AvtorskiDogovor_Firma">
+            <End Role="Firma" EntitySet="Firma" />
+            <End Role="AvtorskiDogovor" EntitySet="AvtorskiDogovor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DogovorNaDelo_Firma" Association="AvtorskaModel.Store.FK_DogovorNaDelo_Firma">
+            <End Role="Firma" EntitySet="Firma" />
+            <End Role="DogovorNaDelo" EntitySet="DogovorNaDelo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DogovorSoAvtor_AvtorskiClenovi" Association="AvtorskaModel.Store.FK_DogovorSoAvtor_AvtorskiClenovi">
+            <End Role="AvtorskiClenovi" EntitySet="AvtorskiClenovi" />
+            <End Role="DogovorSoAvtor" EntitySet="DogovorSoAvtor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DogovorSoAvtor_AvtorskiDogovor" Association="AvtorskaModel.Store.FK_DogovorSoAvtor_AvtorskiDogovor">
+            <End Role="AvtorskiDogovor" EntitySet="AvtorskiDogovor" />
+            <End Role="DogovorSoAvtor" EntitySet="DogovorSoAvtor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DogovorSoIzveduvac_DogovorNaDelo" Association="AvtorskaModel.Store.FK_DogovorSoIzveduvac_DogovorNaDelo">
+            <End Role="DogovorNaDelo" EntitySet="DogovorNaDelo" />
+            <End Role="DogovorSoIzveduvac" EntitySet="DogovorSoIzveduvac" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DogovorSoIzveduvac_Izveduvaci" Association="AvtorskaModel.Store.FK_DogovorSoIzveduvac_Izveduvaci">
+            <End Role="Izveduvaci" EntitySet="Izveduvaci" />
+            <End Role="DogovorSoIzveduvac" EntitySet="DogovorSoIzveduvac" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FakturiAvtorskiDogovor_AvtorskiDogovor" Association="AvtorskaModel.Store.FK_FakturiAvtorskiDogovor_AvtorskiDogovor">
+            <End Role="AvtorskiDogovor" EntitySet="AvtorskiDogovor" />
+            <End Role="FakturiAvtorskiDogovor" EntitySet="FakturiAvtorskiDogovor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FakturiAvtorskiDogovor_Fakturi" Association="AvtorskaModel.Store.FK_FakturiAvtorskiDogovor_Fakturi">
+            <End Role="Fakturi" EntitySet="Fakturi" />
+            <End Role="FakturiAvtorskiDogovor" EntitySet="FakturiAvtorskiDogovor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FakturiDogovorNaDelo_DogovorNaDelo" Association="AvtorskaModel.Store.FK_FakturiDogovorNaDelo_DogovorNaDelo">
+            <End Role="DogovorNaDelo" EntitySet="DogovorNaDelo" />
+            <End Role="FakturiDogovorNaDelo" EntitySet="FakturiDogovorNaDelo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FakturiDogovorNaDelo_Fakturi" Association="AvtorskaModel.Store.FK_FakturiDogovorNaDelo_Fakturi">
+            <End Role="Fakturi" EntitySet="Fakturi" />
+            <End Role="FakturiDogovorNaDelo" EntitySet="FakturiDogovorNaDelo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IstorijaPlakjanje_Fakturi" Association="AvtorskaModel.Store.FK_IstorijaPlakjanje_Fakturi">
+            <End Role="Fakturi" EntitySet="Fakturi" />
+            <End Role="IstorijaPlakjanje" EntitySet="IstorijaPlakjanje" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Izveduvaci_Naselbi" Association="AvtorskaModel.Store.FK_Izveduvaci_Naselbi">
+            <End Role="Naselbi" EntitySet="Naselbi" />
+            <End Role="Izveduvaci" EntitySet="Izveduvaci" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Izveduvaci_Pol" Association="AvtorskaModel.Store.FK_Izveduvaci_Pol">
+            <End Role="Pol" EntitySet="Pol" />
+            <End Role="Izveduvaci" EntitySet="Izveduvaci" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZiroSmetkaAvtor_AvtorskiClenovi" Association="AvtorskaModel.Store.FK_ZiroSmetkaAvtor_AvtorskiClenovi">
+            <End Role="AvtorskiClenovi" EntitySet="AvtorskiClenovi" />
+            <End Role="ZiroSmetkaAvtor" EntitySet="ZiroSmetkaAvtor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZiroSmetkaAvtor_Banka" Association="AvtorskaModel.Store.FK_ZiroSmetkaAvtor_Banka">
+            <End Role="Banka" EntitySet="Banka" />
+            <End Role="ZiroSmetkaAvtor" EntitySet="ZiroSmetkaAvtor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZiroSmetkaIzveduvac_Banka" Association="AvtorskaModel.Store.FK_ZiroSmetkaIzveduvac_Banka">
+            <End Role="Banka" EntitySet="Banka" />
+            <End Role="ZiroSmetkaIzveduvac" EntitySet="ZiroSmetkaIzveduvac" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZiroSmetkaIzveduvac_Izveduvaci" Association="AvtorskaModel.Store.FK_ZiroSmetkaIzveduvac_Izveduvaci">
+            <End Role="Izveduvaci" EntitySet="Izveduvaci" />
+            <End Role="ZiroSmetkaIzveduvac" EntitySet="ZiroSmetkaIzveduvac" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AvtorskiClenovi">
+          <Key>
+            <PropertyRef Name="IdAvtorskiClen" />
+          </Key>
+          <Property Name="IdAvtorskiClen" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClenskiBroj" Type="int" />
+          <Property Name="Ime" Type="nvarchar" MaxLength="50" />
+          <Property Name="Prezime" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adresa" Type="nvarchar" MaxLength="50" />
+          <Property Name="IdNaselba" Type="int" />
+          <Property Name="IdPol" Type="int" />
+          <Property Name="MaticenBroj" Type="nvarchar" MaxLength="15" />
+          <Property Name="LicnaKarta" Type="nvarchar" MaxLength="10" />
+          <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
+          <Property Name="DatumNaZaclenuvanje" Type="datetime" />
+          <Property Name="Korisnik" Type="int" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Zabeleska" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AvtorskiDogovor">
+          <Key>
+            <PropertyRef Name="IdAvtorskiDogovor" />
+          </Key>
+          <Property Name="IdAvtorskiDogovor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BrojDogovor" Type="int" />
+          <Property Name="Godina" Type="char" MaxLength="4" />
+          <Property Name="TipA" Type="char" MaxLength="1" />
+          <Property Name="Datum" Type="datetime" />
+          <Property Name="OpisRabota" Type="nvarchar(max)" />
+          <Property Name="OpisClen2" Type="nvarchar(max)" />
+          <Property Name="IdDejnost" Type="int" />
+          <Property Name="Personalen" Type="decimal" Scale="4" />
+          <Property Name="Popust" Type="decimal" Scale="4" />
+          <Property Name="Neto" Type="decimal" Scale="4" />
+          <Property Name="Bruto" Type="decimal" Scale="4" />
+          <Property Name="Dat_Od" Type="datetime" />
+          <Property Name="Dat_Do" Type="datetime" />
+          <Property Name="Dog_F" Type="int" />
+          <Property Name="God_F" Type="char" MaxLength="4" />
+          <Property Name="Provizija" Type="decimal" Scale="4" />
+          <Property Name="Kraj" Type="smallint" />
+          <Property Name="prazno" Type="char" MaxLength="2" />
+          <Property Name="tempf" Type="decimal" Scale="4" />
+          <Property Name="Mnozi" Type="smallint" />
+          <Property Name="Sobiraj" Type="smallint" />
+          <Property Name="Rabotnik1" Type="int" />
+          <Property Name="IdFirma" Type="int" />
+          <Property Name="Korisnik" Type="int" />
+        </EntityType>
+        <EntityType Name="Banka">
+          <Key>
+            <PropertyRef Name="IdBanka" />
+          </Key>
+          <Property Name="IdBanka" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NazivBanka" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZiroSmetka" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Dejnosti">
+          <Key>
+            <PropertyRef Name="IdDejnost" />
+          </Key>
+          <Property Name="IdDejnost" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SifraDejnost" Type="int" Nullable="false" />
+          <Property Name="PopustDejnost" Type="float" Nullable="false" />
+          <Property Name="OpisDejnost" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="DogovorNaDelo">
+          <Key>
+            <PropertyRef Name="IdDogovorNaDelo" />
+          </Key>
+          <Property Name="IdDogovorNaDelo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Broj" Type="int" />
+          <Property Name="Godina" Type="char" MaxLength="4" />
+          <Property Name="TipA" Type="char" MaxLength="1" />
+          <Property Name="Datum" Type="datetime" />
+          <Property Name="OpisRabota" Type="nvarchar(max)" />
+          <Property Name="OpisClen2" Type="nvarchar(max)" />
+          <Property Name="Personalen" Type="decimal" Scale="4" />
+          <Property Name="Popust" Type="decimal" Scale="4" />
+          <Property Name="Neto" Type="decimal" Scale="4" />
+          <Property Name="Bruto" Type="decimal" Scale="4" />
+          <Property Name="Dat_Od" Type="char" MaxLength="10" />
+          <Property Name="Dat_Do" Type="char" MaxLength="10" />
+          <Property Name="Dog_F" Type="int" />
+          <Property Name="God_F" Type="char" MaxLength="4" />
+          <Property Name="Provizija" Type="decimal" Scale="4" />
+          <Property Name="Kraj" Type="smallint" />
+          <Property Name="prazno" Type="char" MaxLength="2" />
+          <Property Name="tempf" Type="decimal" Scale="4" />
+          <Property Name="IdFirma" Type="int" />
+          <Property Name="Korisnik" Type="int" />
+        </EntityType>
+        <EntityType Name="DogovorSoAvtor">
+          <Key>
+            <PropertyRef Name="IdDogovorSoAvtor" />
+          </Key>
+          <Property Name="IdDogovorSoAvtor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdDogovor" Type="int" Nullable="false" />
+          <Property Name="IdAvtor" Type="int" Nullable="false" />
+          <Property Name="Procent" Type="decimal" Scale="4" />
+          <Property Name="Neto" Type="decimal" Scale="4" />
+        </EntityType>
+        <EntityType Name="DogovorSoIzveduvac">
+          <Key>
+            <PropertyRef Name="IdDogovorIzveduvac" />
+          </Key>
+          <Property Name="IdDogovorIzveduvac" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdDogovor" Type="int" />
+          <Property Name="IdIzveduvac" Type="int" />
+        </EntityType>
+        <EntityType Name="Fakturi">
+          <Key>
+            <PropertyRef Name="IdFakturi" />
+          </Key>
+          <Property Name="IdFakturi" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Broj" Type="int" />
+          <Property Name="Godina" Type="char" MaxLength="4" />
+          <Property Name="Datum" Type="datetime" />
+          <Property Name="Neto" Type="decimal" Scale="4" />
+          <Property Name="DanocnaOsnovica" Type="decimal" Scale="4" />
+          <Property Name="PersonalenDanok" Type="decimal" Scale="4" />
+          <Property Name="Trosoci" Type="decimal" Scale="4" />
+          <Property Name="DDV_Osnovica" Type="decimal" Scale="4" />
+          <Property Name="DDV_Iznos" Type="decimal" Scale="4" />
+          <Property Name="DDV_Stapka" Type="decimal" Scale="4" />
+          <Property Name="Personalen_Stapka" Type="decimal" Scale="4" />
+          <Property Name="Popust" Type="decimal" Scale="4" />
+          <Property Name="Iznos" Type="decimal" Scale="4" />
+          <Property Name="Tekst" Type="nvarchar(max)" />
+          <Property Name="Plateno" Type="decimal" Scale="4" />
+          <Property Name="DatumPlateno" Type="char" MaxLength="10" />
+          <Property Name="GL_Spisok" Type="int" />
+          <Property Name="GOD_S" Type="char" MaxLength="4" />
+          <Property Name="DOG_K" Type="int" />
+          <Property Name="GOD_K" Type="char" MaxLength="4" />
+          <Property Name="prazno" Type="char" MaxLength="2" />
+          <Property Name="tempf" Type="decimal" Scale="4" />
+          <Property Name="Seuste_Ne" Type="smallint" />
+          <Property Name="Korisnik" Type="int" />
+        </EntityType>
+        <EntityType Name="FakturiAvtorskiDogovor">
+          <Key>
+            <PropertyRef Name="IdFakturiAvtorskiDogovor" />
+          </Key>
+          <Property Name="IdFakturiAvtorskiDogovor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdFaktura" Type="int" Nullable="false" />
+          <Property Name="IdAvtorskiDogovor" Type="int" Nullable="false" />
+          <Property Name="Bruto" Type="decimal" Scale="4" />
+        </EntityType>
+        <EntityType Name="FakturiDogovorNaDelo">
+          <Key>
+            <PropertyRef Name="IdFakturiDogovorNaDelo" />
+          </Key>
+          <Property Name="IdFakturiDogovorNaDelo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdFaktura" Type="int" />
+          <Property Name="IdDogovorNaDelo" Type="int" />
+        </EntityType>
+        <EntityType Name="Firma">
+          <Key>
+            <PropertyRef Name="IdFirma" />
+          </Key>
+          <Property Name="IdFirma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BrFirma" Type="nvarchar" MaxLength="50" />
+          <Property Name="Firma" Type="nvarchar" MaxLength="80" />
+          <Property Name="KontaktLice" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telefoni" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProvizijaA" Type="decimal" Scale="4" />
+          <Property Name="ProvizijaD" Type="decimal" Scale="4" />
+          <Property Name="Adresa" Type="nvarchar" MaxLength="50" />
+          <Property Name="Zastapnik" Type="nvarchar" MaxLength="50" />
+          <Property Name="DatumNaVnesuvanje" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IstorijaPlakjanje">
+          <Key>
+            <PropertyRef Name="IdIstorijaPlakjanje" />
+          </Key>
+          <Property Name="IdIstorijaPlakjanje" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdFaktura" Type="int" />
+          <Property Name="Datum" Type="datetime" />
+          <Property Name="PlakjaSega" Type="decimal" Scale="4" />
+          <Property Name="Otposle" Type="bit" />
+        </EntityType>
+        <EntityType Name="Izveduvaci">
+          <Key>
+            <PropertyRef Name="IdIzveduvaci" />
+          </Key>
+          <Property Name="IdIzveduvaci" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Broj" Type="int" />
+          <Property Name="Ime" Type="nvarchar" MaxLength="50" />
+          <Property Name="Prezime" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adresa" Type="nvarchar" MaxLength="50" />
+          <Property Name="IdNaselba" Type="int" />
+          <Property Name="IdPol" Type="int" />
+          <Property Name="MaticenBroj" Type="nvarchar" MaxLength="15" />
+          <Property Name="LicnaKarta" Type="nvarchar" MaxLength="10" />
+          <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
+          <Property Name="DatumNaZaclenuvanje" Type="datetime" />
+          <Property Name="Korisnik" Type="int" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Zabeleska" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Korisnik">
+          <Key>
+            <PropertyRef Name="IdKorisnik" />
+          </Key>
+          <Property Name="IdKorisnik" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ime" Type="nvarchar" MaxLength="50" />
+          <Property Name="LoginIme" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="250" />
+          <Property Name="PasswordSalt" Type="int" />
+          <Property Name="DatumNaKoristenje" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Naselbi">
+          <Key>
+            <PropertyRef Name="IdNaselba" />
+          </Key>
+          <Property Name="IdNaselba" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Sifra" Type="int" />
+          <Property Name="OpisNaselba" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="OvaaFirma">
+          <Key>
+            <PropertyRef Name="IdOvaaFirma" />
+          </Key>
+          <Property Name="IdOvaaFirma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Naziv" Type="nvarchar" MaxLength="50" />
+          <Property Name="MB" Type="nvarchar" MaxLength="50" />
+          <Property Name="Smetka" Type="nvarchar" MaxLength="50" />
+          <Property Name="Banka" Type="nvarchar" MaxLength="50" />
+          <Property Name="Danocen" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adresa" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telefono" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telfaks" Type="nvarchar" MaxLength="50" />
+          <Property Name="RABGOD" Type="char" MaxLength="4" />
+          <Property Name="DDV" Type="decimal" Scale="4" />
+          <Property Name="LEVA_MARGINA_D" Type="int" />
+          <Property Name="PERSA" Type="decimal" Scale="4" />
+          <Property Name="PERS1" Type="decimal" Scale="4" />
+          <Property Name="PERS2" Type="decimal" Scale="4" />
+          <Property Name="PERS3" Type="decimal" Scale="4" />
+          <Property Name="BRUTO1" Type="decimal" Scale="4" />
+          <Property Name="BRUTO2" Type="decimal" Scale="4" />
+          <Property Name="PIO" Type="decimal" Scale="4" />
+        </EntityType>
+        <EntityType Name="Pol">
+          <Key>
+            <PropertyRef Name="IdPol" />
+          </Key>
+          <Property Name="IdPol" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NazivPol" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="ZiroSmetkaAvtor">
+          <Key>
+            <PropertyRef Name="IdZiroSmetkaAvtor" />
+          </Key>
+          <Property Name="IdZiroSmetkaAvtor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdAvtor" Type="int" Nullable="false" />
+          <Property Name="IdBanka" Type="int" Nullable="false" />
+          <Property Name="ZiroSmetka" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="ZiroSmetkaIzveduvac">
+          <Key>
+            <PropertyRef Name="IdZiroSmetkaIzveduvac" />
+          </Key>
+          <Property Name="IdZiroSmetkaIzveduvac" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdBanka" Type="int" Nullable="false" />
+          <Property Name="IdIzveduvac" Type="int" Nullable="false" />
+          <Property Name="ZiroSmetka" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK_AvtorskiClenovi_Naselbi">
+          <End Role="Naselbi" Type="AvtorskaModel.Store.Naselbi" Multiplicity="0..1" />
+          <End Role="AvtorskiClenovi" Type="AvtorskaModel.Store.AvtorskiClenovi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Naselbi">
+              <PropertyRef Name="IdNaselba" />
+            </Principal>
+            <Dependent Role="AvtorskiClenovi">
+              <PropertyRef Name="IdNaselba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AvtorskiClenovi_Pol">
+          <End Role="Pol" Type="AvtorskaModel.Store.Pol" Multiplicity="0..1" />
+          <End Role="AvtorskiClenovi" Type="AvtorskaModel.Store.AvtorskiClenovi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pol">
+              <PropertyRef Name="IdPol" />
+            </Principal>
+            <Dependent Role="AvtorskiClenovi">
+              <PropertyRef Name="IdPol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AvtorskiDogovor_Dejnosti">
+          <End Role="Dejnosti" Type="AvtorskaModel.Store.Dejnosti" Multiplicity="0..1" />
+          <End Role="AvtorskiDogovor" Type="AvtorskaModel.Store.AvtorskiDogovor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dejnosti">
+              <PropertyRef Name="IdDejnost" />
+            </Principal>
+            <Dependent Role="AvtorskiDogovor">
+              <PropertyRef Name="IdDejnost" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AvtorskiDogovor_Firma">
+          <End Role="Firma" Type="AvtorskaModel.Store.Firma" Multiplicity="0..1" />
+          <End Role="AvtorskiDogovor" Type="AvtorskaModel.Store.AvtorskiDogovor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firma">
+              <PropertyRef Name="IdFirma" />
+            </Principal>
+            <Dependent Role="AvtorskiDogovor">
+              <PropertyRef Name="IdFirma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DogovorNaDelo_Firma">
+          <End Role="Firma" Type="AvtorskaModel.Store.Firma" Multiplicity="0..1" />
+          <End Role="DogovorNaDelo" Type="AvtorskaModel.Store.DogovorNaDelo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firma">
+              <PropertyRef Name="IdFirma" />
+            </Principal>
+            <Dependent Role="DogovorNaDelo">
+              <PropertyRef Name="IdFirma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DogovorSoAvtor_AvtorskiClenovi">
+          <End Role="AvtorskiClenovi" Type="AvtorskaModel.Store.AvtorskiClenovi" Multiplicity="1" />
+          <End Role="DogovorSoAvtor" Type="AvtorskaModel.Store.DogovorSoAvtor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AvtorskiClenovi">
+              <PropertyRef Name="IdAvtorskiClen" />
+            </Principal>
+            <Dependent Role="DogovorSoAvtor">
+              <PropertyRef Name="IdAvtor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DogovorSoAvtor_AvtorskiDogovor">
+          <End Role="AvtorskiDogovor" Type="AvtorskaModel.Store.AvtorskiDogovor" Multiplicity="1" />
+          <End Role="DogovorSoAvtor" Type="AvtorskaModel.Store.DogovorSoAvtor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AvtorskiDogovor">
+              <PropertyRef Name="IdAvtorskiDogovor" />
+            </Principal>
+            <Dependent Role="DogovorSoAvtor">
+              <PropertyRef Name="IdDogovor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DogovorSoIzveduvac_DogovorNaDelo">
+          <End Role="DogovorNaDelo" Type="AvtorskaModel.Store.DogovorNaDelo" Multiplicity="0..1" />
+          <End Role="DogovorSoIzveduvac" Type="AvtorskaModel.Store.DogovorSoIzveduvac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DogovorNaDelo">
+              <PropertyRef Name="IdDogovorNaDelo" />
+            </Principal>
+            <Dependent Role="DogovorSoIzveduvac">
+              <PropertyRef Name="IdDogovor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DogovorSoIzveduvac_Izveduvaci">
+          <End Role="Izveduvaci" Type="AvtorskaModel.Store.Izveduvaci" Multiplicity="0..1" />
+          <End Role="DogovorSoIzveduvac" Type="AvtorskaModel.Store.DogovorSoIzveduvac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Izveduvaci">
+              <PropertyRef Name="IdIzveduvaci" />
+            </Principal>
+            <Dependent Role="DogovorSoIzveduvac">
+              <PropertyRef Name="IdIzveduvac" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FakturiAvtorskiDogovor_AvtorskiDogovor">
+          <End Role="AvtorskiDogovor" Type="AvtorskaModel.Store.AvtorskiDogovor" Multiplicity="1" />
+          <End Role="FakturiAvtorskiDogovor" Type="AvtorskaModel.Store.FakturiAvtorskiDogovor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AvtorskiDogovor">
+              <PropertyRef Name="IdAvtorskiDogovor" />
+            </Principal>
+            <Dependent Role="FakturiAvtorskiDogovor">
+              <PropertyRef Name="IdAvtorskiDogovor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FakturiAvtorskiDogovor_Fakturi">
+          <End Role="Fakturi" Type="AvtorskaModel.Store.Fakturi" Multiplicity="1" />
+          <End Role="FakturiAvtorskiDogovor" Type="AvtorskaModel.Store.FakturiAvtorskiDogovor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fakturi">
+              <PropertyRef Name="IdFakturi" />
+            </Principal>
+            <Dependent Role="FakturiAvtorskiDogovor">
+              <PropertyRef Name="IdFaktura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FakturiDogovorNaDelo_DogovorNaDelo">
+          <End Role="DogovorNaDelo" Type="AvtorskaModel.Store.DogovorNaDelo" Multiplicity="0..1" />
+          <End Role="FakturiDogovorNaDelo" Type="AvtorskaModel.Store.FakturiDogovorNaDelo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DogovorNaDelo">
+              <PropertyRef Name="IdDogovorNaDelo" />
+            </Principal>
+            <Dependent Role="FakturiDogovorNaDelo">
+              <PropertyRef Name="IdDogovorNaDelo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FakturiDogovorNaDelo_Fakturi">
+          <End Role="Fakturi" Type="AvtorskaModel.Store.Fakturi" Multiplicity="0..1" />
+          <End Role="FakturiDogovorNaDelo" Type="AvtorskaModel.Store.FakturiDogovorNaDelo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fakturi">
+              <PropertyRef Name="IdFakturi" />
+            </Principal>
+            <Dependent Role="FakturiDogovorNaDelo">
+              <PropertyRef Name="IdFaktura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IstorijaPlakjanje_Fakturi">
+          <End Role="Fakturi" Type="AvtorskaModel.Store.Fakturi" Multiplicity="0..1" />
+          <End Role="IstorijaPlakjanje" Type="AvtorskaModel.Store.IstorijaPlakjanje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fakturi">
+              <PropertyRef Name="IdFakturi" />
+            </Principal>
+            <Dependent Role="IstorijaPlakjanje">
+              <PropertyRef Name="IdFaktura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Izveduvaci_Naselbi">
+          <End Role="Naselbi" Type="AvtorskaModel.Store.Naselbi" Multiplicity="0..1" />
+          <End Role="Izveduvaci" Type="AvtorskaModel.Store.Izveduvaci" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Naselbi">
+              <PropertyRef Name="IdNaselba" />
+            </Principal>
+            <Dependent Role="Izveduvaci">
+              <PropertyRef Name="IdNaselba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Izveduvaci_Pol">
+          <End Role="Pol" Type="AvtorskaModel.Store.Pol" Multiplicity="0..1" />
+          <End Role="Izveduvaci" Type="AvtorskaModel.Store.Izveduvaci" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pol">
+              <PropertyRef Name="IdPol" />
+            </Principal>
+            <Dependent Role="Izveduvaci">
+              <PropertyRef Name="IdPol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZiroSmetkaAvtor_AvtorskiClenovi">
+          <End Role="AvtorskiClenovi" Type="AvtorskaModel.Store.AvtorskiClenovi" Multiplicity="1" />
+          <End Role="ZiroSmetkaAvtor" Type="AvtorskaModel.Store.ZiroSmetkaAvtor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AvtorskiClenovi">
+              <PropertyRef Name="IdAvtorskiClen" />
+            </Principal>
+            <Dependent Role="ZiroSmetkaAvtor">
+              <PropertyRef Name="IdAvtor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZiroSmetkaAvtor_Banka">
+          <End Role="Banka" Type="AvtorskaModel.Store.Banka" Multiplicity="1" />
+          <End Role="ZiroSmetkaAvtor" Type="AvtorskaModel.Store.ZiroSmetkaAvtor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Banka">
+              <PropertyRef Name="IdBanka" />
+            </Principal>
+            <Dependent Role="ZiroSmetkaAvtor">
+              <PropertyRef Name="IdBanka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZiroSmetkaIzveduvac_Banka">
+          <End Role="Banka" Type="AvtorskaModel.Store.Banka" Multiplicity="1" />
+          <End Role="ZiroSmetkaIzveduvac" Type="AvtorskaModel.Store.ZiroSmetkaIzveduvac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Banka">
+              <PropertyRef Name="IdBanka" />
+            </Principal>
+            <Dependent Role="ZiroSmetkaIzveduvac">
+              <PropertyRef Name="IdBanka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZiroSmetkaIzveduvac_Izveduvaci">
+          <End Role="Izveduvaci" Type="AvtorskaModel.Store.Izveduvaci" Multiplicity="1" />
+          <End Role="ZiroSmetkaIzveduvac" Type="AvtorskaModel.Store.ZiroSmetkaIzveduvac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Izveduvaci">
+              <PropertyRef Name="IdIzveduvaci" />
+            </Principal>
+            <Dependent Role="ZiroSmetkaIzveduvac">
+              <PropertyRef Name="IdIzveduvac" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'Avtorska.dbo.FAK_DOG_D' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="FAK_DOG_D">
+        <Property Name="BROJ_F" Type="int" />
+        <Property Name="GODINA_F" Type="char" MaxLength="4" />
+        <Property Name="BROJ_A" Type="int" />
+        <Property Name="GODINA_A" Type="char" MaxLength="4" />
+        <Property Name="BRUTO" Type="float" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Avtorska.dbo.PARI_A' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="PARI_A">
+        <Property Name="BROJ" Type="int" />
+        <Property Name="GODINA" Type="char" MaxLength="4" />
+        <Property Name="TIPD" Type="char" MaxLength="1" />
+        <Property Name="DATUM" Type="char" MaxLength="10" />
+        <Property Name="REDBR" Type="smallint" />
+        <Property Name="RABOTNIK" Type="int" />
+        <Property Name="NUM1" Type="float" />
+        <Property Name="NUM2" Type="float" />
+        <Property Name="PROCENTUAL" Type="float" />
+        <Property Name="DATUM_S" Type="char" MaxLength="10" />
+        <Property Name="GL_SPISOK" Type="int" />
+        <Property Name="GOD_S" Type="char" MaxLength="4" />
+        <Property Name="SPISOK" Type="smallint" />
+        <Property Name="DIREKTOR" Type="char" MaxLength="25" />
+        <Property Name="DANOSN" Type="float" />
+        <Property Name="PERSDANOK" Type="float" />
+        <Property Name="TROSOCI" Type="float" />
+        <Property Name="DDV_OSN" Type="float" />
+        <Property Name="DDV_IZN" Type="float" />
+        <Property Name="DDV_STAPKA" Type="float" />
+        <Property Name="PERS_STAPKA" Type="float" />
+        <Property Name="POPUST" Type="float" />
+        <Property Name="IZNOS" Type="float" />
+        <Property Name="BROJF" Type="int" />
+        <Property Name="GODINAF" Type="char" MaxLength="4" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Avtorska.dbo.PARI_D' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="PARI_D">
+        <Property Name="BROJ" Type="int" />
+        <Property Name="GODINA" Type="char" MaxLength="4" />
+        <Property Name="TIPD" Type="char" MaxLength="1" />
+        <Property Name="DATUM" Type="char" MaxLength="10" />
+        <Property Name="REDBR" Type="smallint" />
+        <Property Name="RABOTNIK" Type="int" />
+        <Property Name="NUM1" Type="float" />
+        <Property Name="NUM2" Type="float" />
+        <Property Name="PROCENTUAL" Type="float" />
+        <Property Name="DATUM_S" Type="char" MaxLength="10" />
+        <Property Name="GL_SPISOK" Type="int" />
+        <Property Name="GOD_S" Type="char" MaxLength="4" />
+        <Property Name="SPISOK" Type="smallint" />
+        <Property Name="DIREKTOR" Type="char" MaxLength="25" />
+        <Property Name="PERS_STAPKA1" Type="float" />
+        <Property Name="PERSDANOK1" Type="float" />
+        <Property Name="PERS_STAPKA2" Type="float" />
+        <Property Name="PERSDANOK2" Type="float" />
+        <Property Name="PERS_STAPKA3" Type="float" />
+        <Property Name="PERSDANOK3" Type="float" />
+        <Property Name="TROSOCI" Type="float" />
+        <Property Name="DDV_OSN" Type="float" />
+        <Property Name="DDV_IZN" Type="float" />
+        <Property Name="DDV_STAPKA" Type="float" />
+        <Property Name="IZNOS" Type="float" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Avtorska.dbo.PPD_GI' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="PPD_GI">
+        <Property Name="RABOTNIK" Type="int" />
+        <Property Name="MB" Type="char" MaxLength="13" />
+        <Property Name="PREZIMEIME" Type="char" MaxLength="50" />
+        <Property Name="GOD_S" Type="char" MaxLength="4" />
+        <Property Name="TIP" Type="char" MaxLength="1" />
+        <Property Name="NETO" Type="float" />
+        <Property Name="PERSDANOK" Type="float" />
+        <Property Name="BRUTO" Type="float" />
+        <Property Name="PRIZNATITR" Type="float" />
+        <Property Name="ARHIVIRANO" Type="smallint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Avtorska.dbo.PredSpisok' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="PredSpisok">
+        <Property Name="BROJ" Type="int" />
+        <Property Name="GODINA" Type="char" MaxLength="4" />
+        <Property Name="TIPD" Type="char" MaxLength="1" />
+        <Property Name="DATUM" Type="char" MaxLength="10" />
+        <Property Name="REDBR" Type="smallint" />
+        <Property Name="RABOTNIK" Type="int" />
+        <Property Name="NUM1" Type="float" />
+        <Property Name="NUM2" Type="float" />
+        <Property Name="STANICA" Type="smallint" />
+        <Property Name="BROJF" Type="int" />
+        <Property Name="GODINAF" Type="char" MaxLength="4" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Avtorska.dbo.tmpSpisok' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="tmpSpisok">
+        <Property Name="BROJ" Type="int" />
+        <Property Name="GODINA" Type="char" MaxLength="4" />
+        <Property Name="TIPD" Type="char" MaxLength="1" />
+        <Property Name="DATUM" Type="char" MaxLength="10" />
+        <Property Name="REDBR" Type="smallint" />
+        <Property Name="RABOTNIK" Type="int" />
+        <Property Name="NUM1" Type="float" />
+        <Property Name="NUM2" Type="float" />
+        <Property Name="STANICA" Type="smallint" />
+        <Property Name="SPISOK" Type="smallint" />
+        <Property Name="GL_SPISOK" Type="int" />
+        <Property Name="GODINA_S" Type="char" MaxLength="4" />
+        <Property Name="DATUM_S" Type="char" MaxLength="10" />
+        <Property Name="BROJF" Type="int" />
+        <Property Name="GODINAF" Type="char" MaxLength="4" />
+      </EntityType>-->
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AvtorskaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="AvtorskaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AvtorskiClenovi" EntityType="AvtorskaModel.AvtorskiClenovi" />
+          <EntitySet Name="AvtorskiDogovor" EntityType="AvtorskaModel.AvtorskiDogovor" />
+          <EntitySet Name="Banka" EntityType="AvtorskaModel.Banka" />
+          <EntitySet Name="Dejnosti" EntityType="AvtorskaModel.Dejnosti" />
+          <EntitySet Name="DogovorNaDelo" EntityType="AvtorskaModel.DogovorNaDelo" />
+          <EntitySet Name="DogovorSoAvtor" EntityType="AvtorskaModel.DogovorSoAvtor" />
+          <EntitySet Name="DogovorSoIzveduvac" EntityType="AvtorskaModel.DogovorSoIzveduvac" />
+          <EntitySet Name="Fakturi" EntityType="AvtorskaModel.Fakturi" />
+          <EntitySet Name="FakturiAvtorskiDogovor" EntityType="AvtorskaModel.FakturiAvtorskiDogovor" />
+          <EntitySet Name="FakturiDogovorNaDelo" EntityType="AvtorskaModel.FakturiDogovorNaDelo" />
+          <EntitySet Name="Firma" EntityType="AvtorskaModel.Firma" />
+          <EntitySet Name="IstorijaPlakjanje" EntityType="AvtorskaModel.IstorijaPlakjanje" />
+          <EntitySet Name="Izveduvaci" EntityType="AvtorskaModel.Izveduvaci" />
+          <EntitySet Name="Korisnik" EntityType="AvtorskaModel.Korisnik" />
+          <EntitySet Name="Naselbi" EntityType="AvtorskaModel.Naselbi" />
+          <EntitySet Name="OvaaFirma" EntityType="AvtorskaModel.OvaaFirma" />
+          <EntitySet Name="Pol" EntityType="AvtorskaModel.Pol" />
+          <EntitySet Name="sysdiagrams" EntityType="AvtorskaModel.sysdiagrams" />
+          <EntitySet Name="ZiroSmetkaAvtor" EntityType="AvtorskaModel.ZiroSmetkaAvtor" />
+          <EntitySet Name="ZiroSmetkaIzveduvac" EntityType="AvtorskaModel.ZiroSmetkaIzveduvac" />
+          <AssociationSet Name="FK_AvtorskiClenovi_Naselbi" Association="AvtorskaModel.FK_AvtorskiClenovi_Naselbi">
+            <End Role="Naselbi" EntitySet="Naselbi" />
+            <End Role="AvtorskiClenovi" EntitySet="AvtorskiClenovi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AvtorskiClenovi_Pol" Association="AvtorskaModel.FK_AvtorskiClenovi_Pol">
+            <End Role="Pol" EntitySet="Pol" />
+            <End Role="AvtorskiClenovi" EntitySet="AvtorskiClenovi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DogovorSoAvtor_AvtorskiClenovi" Association="AvtorskaModel.FK_DogovorSoAvtor_AvtorskiClenovi">
+            <End Role="AvtorskiClenovi" EntitySet="AvtorskiClenovi" />
+            <End Role="DogovorSoAvtor" EntitySet="DogovorSoAvtor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZiroSmetkaAvtor_AvtorskiClenovi" Association="AvtorskaModel.FK_ZiroSmetkaAvtor_AvtorskiClenovi">
+            <End Role="AvtorskiClenovi" EntitySet="AvtorskiClenovi" />
+            <End Role="ZiroSmetkaAvtor" EntitySet="ZiroSmetkaAvtor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AvtorskiDogovor_Dejnosti" Association="AvtorskaModel.FK_AvtorskiDogovor_Dejnosti">
+            <End Role="Dejnosti" EntitySet="Dejnosti" />
+            <End Role="AvtorskiDogovor" EntitySet="AvtorskiDogovor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AvtorskiDogovor_Firma" Association="AvtorskaModel.FK_AvtorskiDogovor_Firma">
+            <End Role="Firma" EntitySet="Firma" />
+            <End Role="AvtorskiDogovor" EntitySet="AvtorskiDogovor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DogovorSoAvtor_AvtorskiDogovor" Association="AvtorskaModel.FK_DogovorSoAvtor_AvtorskiDogovor">
+            <End Role="AvtorskiDogovor" EntitySet="AvtorskiDogovor" />
+            <End Role="DogovorSoAvtor" EntitySet="DogovorSoAvtor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FakturiAvtorskiDogovor_AvtorskiDogovor" Association="AvtorskaModel.FK_FakturiAvtorskiDogovor_AvtorskiDogovor">
+            <End Role="AvtorskiDogovor" EntitySet="AvtorskiDogovor" />
+            <End Role="FakturiAvtorskiDogovor" EntitySet="FakturiAvtorskiDogovor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZiroSmetkaAvtor_Banka" Association="AvtorskaModel.FK_ZiroSmetkaAvtor_Banka">
+            <End Role="Banka" EntitySet="Banka" />
+            <End Role="ZiroSmetkaAvtor" EntitySet="ZiroSmetkaAvtor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZiroSmetkaIzveduvac_Banka" Association="AvtorskaModel.FK_ZiroSmetkaIzveduvac_Banka">
+            <End Role="Banka" EntitySet="Banka" />
+            <End Role="ZiroSmetkaIzveduvac" EntitySet="ZiroSmetkaIzveduvac" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DogovorNaDelo_Firma" Association="AvtorskaModel.FK_DogovorNaDelo_Firma">
+            <End Role="Firma" EntitySet="Firma" />
+            <End Role="DogovorNaDelo" EntitySet="DogovorNaDelo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DogovorSoIzveduvac_DogovorNaDelo" Association="AvtorskaModel.FK_DogovorSoIzveduvac_DogovorNaDelo">
+            <End Role="DogovorNaDelo" EntitySet="DogovorNaDelo" />
+            <End Role="DogovorSoIzveduvac" EntitySet="DogovorSoIzveduvac" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FakturiDogovorNaDelo_DogovorNaDelo" Association="AvtorskaModel.FK_FakturiDogovorNaDelo_DogovorNaDelo">
+            <End Role="DogovorNaDelo" EntitySet="DogovorNaDelo" />
+            <End Role="FakturiDogovorNaDelo" EntitySet="FakturiDogovorNaDelo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DogovorSoIzveduvac_Izveduvaci" Association="AvtorskaModel.FK_DogovorSoIzveduvac_Izveduvaci">
+            <End Role="Izveduvaci" EntitySet="Izveduvaci" />
+            <End Role="DogovorSoIzveduvac" EntitySet="DogovorSoIzveduvac" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FakturiAvtorskiDogovor_Fakturi" Association="AvtorskaModel.FK_FakturiAvtorskiDogovor_Fakturi">
+            <End Role="Fakturi" EntitySet="Fakturi" />
+            <End Role="FakturiAvtorskiDogovor" EntitySet="FakturiAvtorskiDogovor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FakturiDogovorNaDelo_Fakturi" Association="AvtorskaModel.FK_FakturiDogovorNaDelo_Fakturi">
+            <End Role="Fakturi" EntitySet="Fakturi" />
+            <End Role="FakturiDogovorNaDelo" EntitySet="FakturiDogovorNaDelo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IstorijaPlakjanje_Fakturi" Association="AvtorskaModel.FK_IstorijaPlakjanje_Fakturi">
+            <End Role="Fakturi" EntitySet="Fakturi" />
+            <End Role="IstorijaPlakjanje" EntitySet="IstorijaPlakjanje" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Izveduvaci_Naselbi" Association="AvtorskaModel.FK_Izveduvaci_Naselbi">
+            <End Role="Naselbi" EntitySet="Naselbi" />
+            <End Role="Izveduvaci" EntitySet="Izveduvaci" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Izveduvaci_Pol" Association="AvtorskaModel.FK_Izveduvaci_Pol">
+            <End Role="Pol" EntitySet="Pol" />
+            <End Role="Izveduvaci" EntitySet="Izveduvaci" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZiroSmetkaIzveduvac_Izveduvaci" Association="AvtorskaModel.FK_ZiroSmetkaIzveduvac_Izveduvaci">
+            <End Role="Izveduvaci" EntitySet="Izveduvaci" />
+            <End Role="ZiroSmetkaIzveduvac" EntitySet="ZiroSmetkaIzveduvac" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AvtorskiClenovi">
+          <Key>
+            <PropertyRef Name="IdAvtorskiClen" />
+          </Key>
+          <Property Name="IdAvtorskiClen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClenskiBroj" Type="Int32" />
+          <Property Name="Ime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Prezime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Adresa" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IdNaselba" Type="Int32" />
+          <Property Name="IdPol" Type="Int32" />
+          <Property Name="MaticenBroj" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="LicnaKarta" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Telefon" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DatumNaZaclenuvanje" Type="DateTime" />
+          <Property Name="Korisnik" Type="Int32" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Zabeleska" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Naselbi" Relationship="AvtorskaModel.FK_AvtorskiClenovi_Naselbi" FromRole="AvtorskiClenovi" ToRole="Naselbi" />
+          <NavigationProperty Name="Pol" Relationship="AvtorskaModel.FK_AvtorskiClenovi_Pol" FromRole="AvtorskiClenovi" ToRole="Pol" />
+          <NavigationProperty Name="DogovorSoAvtor" Relationship="AvtorskaModel.FK_DogovorSoAvtor_AvtorskiClenovi" FromRole="AvtorskiClenovi" ToRole="DogovorSoAvtor" />
+          <NavigationProperty Name="ZiroSmetkaAvtor" Relationship="AvtorskaModel.FK_ZiroSmetkaAvtor_AvtorskiClenovi" FromRole="AvtorskiClenovi" ToRole="ZiroSmetkaAvtor" />
+        </EntityType>
+        <EntityType Name="AvtorskiDogovor">
+          <Key>
+            <PropertyRef Name="IdAvtorskiDogovor" />
+          </Key>
+          <Property Name="IdAvtorskiDogovor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrojDogovor" Type="Int32" />
+          <Property Name="Godina" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="TipA" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Datum" Type="DateTime" />
+          <Property Name="OpisRabota" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="OpisClen2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="IdDejnost" Type="Int32" />
+          <Property Name="Personalen" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Popust" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Neto" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Bruto" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Dat_Od" Type="DateTime" />
+          <Property Name="Dat_Do" Type="DateTime" />
+          <Property Name="Dog_F" Type="Int32" />
+          <Property Name="God_F" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="Provizija" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Kraj" Type="Int16" />
+          <Property Name="prazno" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="tempf" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Mnozi" Type="Int16" />
+          <Property Name="Sobiraj" Type="Int16" />
+          <Property Name="Rabotnik1" Type="Int32" />
+          <Property Name="IdFirma" Type="Int32" />
+          <Property Name="Korisnik" Type="Int32" />
+          <NavigationProperty Name="Dejnosti" Relationship="AvtorskaModel.FK_AvtorskiDogovor_Dejnosti" FromRole="AvtorskiDogovor" ToRole="Dejnosti" />
+          <NavigationProperty Name="Firma" Relationship="AvtorskaModel.FK_AvtorskiDogovor_Firma" FromRole="AvtorskiDogovor" ToRole="Firma" />
+          <NavigationProperty Name="DogovorSoAvtor" Relationship="AvtorskaModel.FK_DogovorSoAvtor_AvtorskiDogovor" FromRole="AvtorskiDogovor" ToRole="DogovorSoAvtor" />
+          <NavigationProperty Name="FakturiAvtorskiDogovor" Relationship="AvtorskaModel.FK_FakturiAvtorskiDogovor_AvtorskiDogovor" FromRole="AvtorskiDogovor" ToRole="FakturiAvtorskiDogovor" />
+        </EntityType>
+        <EntityType Name="Banka">
+          <Key>
+            <PropertyRef Name="IdBanka" />
+          </Key>
+          <Property Name="IdBanka" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NazivBanka" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ZiroSmetka" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ZiroSmetkaAvtor" Relationship="AvtorskaModel.FK_ZiroSmetkaAvtor_Banka" FromRole="Banka" ToRole="ZiroSmetkaAvtor" />
+          <NavigationProperty Name="ZiroSmetkaIzveduvac" Relationship="AvtorskaModel.FK_ZiroSmetkaIzveduvac_Banka" FromRole="Banka" ToRole="ZiroSmetkaIzveduvac" />
+        </EntityType>
+        <EntityType Name="Dejnosti">
+          <Key>
+            <PropertyRef Name="IdDejnost" />
+          </Key>
+          <Property Name="IdDejnost" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SifraDejnost" Type="Int32" Nullable="false" />
+          <Property Name="PopustDejnost" Type="Double" Nullable="false" />
+          <Property Name="OpisDejnost" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="AvtorskiDogovor" Relationship="AvtorskaModel.FK_AvtorskiDogovor_Dejnosti" FromRole="Dejnosti" ToRole="AvtorskiDogovor" />
+        </EntityType>
+        <EntityType Name="DogovorNaDelo">
+          <Key>
+            <PropertyRef Name="IdDogovorNaDelo" />
+          </Key>
+          <Property Name="IdDogovorNaDelo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Broj" Type="Int32" />
+          <Property Name="Godina" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="TipA" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Datum" Type="DateTime" />
+          <Property Name="OpisRabota" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="OpisClen2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Personalen" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Popust" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Neto" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Bruto" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Dat_Od" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="Dat_Do" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="Dog_F" Type="Int32" />
+          <Property Name="God_F" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="Provizija" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Kraj" Type="Int16" />
+          <Property Name="prazno" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="tempf" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="IdFirma" Type="Int32" />
+          <Property Name="Korisnik" Type="Int32" />
+          <NavigationProperty Name="Firma" Relationship="AvtorskaModel.FK_DogovorNaDelo_Firma" FromRole="DogovorNaDelo" ToRole="Firma" />
+          <NavigationProperty Name="DogovorSoIzveduvac" Relationship="AvtorskaModel.FK_DogovorSoIzveduvac_DogovorNaDelo" FromRole="DogovorNaDelo" ToRole="DogovorSoIzveduvac" />
+          <NavigationProperty Name="FakturiDogovorNaDelo" Relationship="AvtorskaModel.FK_FakturiDogovorNaDelo_DogovorNaDelo" FromRole="DogovorNaDelo" ToRole="FakturiDogovorNaDelo" />
+        </EntityType>
+        <EntityType Name="DogovorSoAvtor">
+          <Key>
+            <PropertyRef Name="IdDogovorSoAvtor" />
+          </Key>
+          <Property Name="IdDogovorSoAvtor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdDogovor" Type="Int32" Nullable="false" />
+          <Property Name="IdAvtor" Type="Int32" Nullable="false" />
+          <Property Name="Procent" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Neto" Type="Decimal" Precision="18" Scale="4" />
+          <NavigationProperty Name="AvtorskiClenovi" Relationship="AvtorskaModel.FK_DogovorSoAvtor_AvtorskiClenovi" FromRole="DogovorSoAvtor" ToRole="AvtorskiClenovi" />
+          <NavigationProperty Name="AvtorskiDogovor" Relationship="AvtorskaModel.FK_DogovorSoAvtor_AvtorskiDogovor" FromRole="DogovorSoAvtor" ToRole="AvtorskiDogovor" />
+        </EntityType>
+        <EntityType Name="DogovorSoIzveduvac">
+          <Key>
+            <PropertyRef Name="IdDogovorIzveduvac" />
+          </Key>
+          <Property Name="IdDogovorIzveduvac" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdDogovor" Type="Int32" />
+          <Property Name="IdIzveduvac" Type="Int32" />
+          <NavigationProperty Name="DogovorNaDelo" Relationship="AvtorskaModel.FK_DogovorSoIzveduvac_DogovorNaDelo" FromRole="DogovorSoIzveduvac" ToRole="DogovorNaDelo" />
+          <NavigationProperty Name="Izveduvaci" Relationship="AvtorskaModel.FK_DogovorSoIzveduvac_Izveduvaci" FromRole="DogovorSoIzveduvac" ToRole="Izveduvaci" />
+        </EntityType>
+        <EntityType Name="Fakturi">
+          <Key>
+            <PropertyRef Name="IdFakturi" />
+          </Key>
+          <Property Name="IdFakturi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Broj" Type="Int32" />
+          <Property Name="Godina" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="Datum" Type="DateTime" />
+          <Property Name="Neto" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="DanocnaOsnovica" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="PersonalenDanok" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Trosoci" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="DDV_Osnovica" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="DDV_Iznos" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="DDV_Stapka" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Personalen_Stapka" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Popust" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Iznos" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Tekst" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Plateno" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="DatumPlateno" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="GL_Spisok" Type="Int32" />
+          <Property Name="GOD_S" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="DOG_K" Type="Int32" />
+          <Property Name="GOD_K" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="prazno" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="tempf" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Seuste_Ne" Type="Int16" />
+          <Property Name="Korisnik" Type="Int32" />
+          <NavigationProperty Name="FakturiAvtorskiDogovor" Relationship="AvtorskaModel.FK_FakturiAvtorskiDogovor_Fakturi" FromRole="Fakturi" ToRole="FakturiAvtorskiDogovor" />
+          <NavigationProperty Name="FakturiDogovorNaDelo" Relationship="AvtorskaModel.FK_FakturiDogovorNaDelo_Fakturi" FromRole="Fakturi" ToRole="FakturiDogovorNaDelo" />
+          <NavigationProperty Name="IstorijaPlakjanje" Relationship="AvtorskaModel.FK_IstorijaPlakjanje_Fakturi" FromRole="Fakturi" ToRole="IstorijaPlakjanje" />
+        </EntityType>
+        <EntityType Name="FakturiAvtorskiDogovor">
+          <Key>
+            <PropertyRef Name="IdFakturiAvtorskiDogovor" />
+          </Key>
+          <Property Name="IdFakturiAvtorskiDogovor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdFaktura" Type="Int32" Nullable="false" />
+          <Property Name="IdAvtorskiDogovor" Type="Int32" Nullable="false" />
+          <Property Name="Bruto" Type="Decimal" Precision="18" Scale="4" />
+          <NavigationProperty Name="AvtorskiDogovor" Relationship="AvtorskaModel.FK_FakturiAvtorskiDogovor_AvtorskiDogovor" FromRole="FakturiAvtorskiDogovor" ToRole="AvtorskiDogovor" />
+          <NavigationProperty Name="Fakturi" Relationship="AvtorskaModel.FK_FakturiAvtorskiDogovor_Fakturi" FromRole="FakturiAvtorskiDogovor" ToRole="Fakturi" />
+        </EntityType>
+        <EntityType Name="FakturiDogovorNaDelo">
+          <Key>
+            <PropertyRef Name="IdFakturiDogovorNaDelo" />
+          </Key>
+          <Property Name="IdFakturiDogovorNaDelo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdFaktura" Type="Int32" />
+          <Property Name="IdDogovorNaDelo" Type="Int32" />
+          <NavigationProperty Name="DogovorNaDelo" Relationship="AvtorskaModel.FK_FakturiDogovorNaDelo_DogovorNaDelo" FromRole="FakturiDogovorNaDelo" ToRole="DogovorNaDelo" />
+          <NavigationProperty Name="Fakturi" Relationship="AvtorskaModel.FK_FakturiDogovorNaDelo_Fakturi" FromRole="FakturiDogovorNaDelo" ToRole="Fakturi" />
+        </EntityType>
+        <EntityType Name="Firma">
+          <Key>
+            <PropertyRef Name="IdFirma" />
+          </Key>
+          <Property Name="IdFirma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrFirma" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Firma1" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+          <Property Name="KontaktLice" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Telefoni" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProvizijaA" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="ProvizijaD" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Adresa" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Zastapnik" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DatumNaVnesuvanje" Type="DateTime" />
+          <NavigationProperty Name="AvtorskiDogovor" Relationship="AvtorskaModel.FK_AvtorskiDogovor_Firma" FromRole="Firma" ToRole="AvtorskiDogovor" />
+          <NavigationProperty Name="DogovorNaDelo" Relationship="AvtorskaModel.FK_DogovorNaDelo_Firma" FromRole="Firma" ToRole="DogovorNaDelo" />
+        </EntityType>
+        <EntityType Name="IstorijaPlakjanje">
+          <Key>
+            <PropertyRef Name="IdIstorijaPlakjanje" />
+          </Key>
+          <Property Name="IdIstorijaPlakjanje" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdFaktura" Type="Int32" />
+          <Property Name="Datum" Type="DateTime" />
+          <Property Name="PlakjaSega" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Otposle" Type="Boolean" />
+          <NavigationProperty Name="Fakturi" Relationship="AvtorskaModel.FK_IstorijaPlakjanje_Fakturi" FromRole="IstorijaPlakjanje" ToRole="Fakturi" />
+        </EntityType>
+        <EntityType Name="Izveduvaci">
+          <Key>
+            <PropertyRef Name="IdIzveduvaci" />
+          </Key>
+          <Property Name="IdIzveduvaci" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Broj" Type="Int32" />
+          <Property Name="Ime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Prezime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Adresa" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IdNaselba" Type="Int32" />
+          <Property Name="IdPol" Type="Int32" />
+          <Property Name="MaticenBroj" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="LicnaKarta" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Telefon" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DatumNaZaclenuvanje" Type="DateTime" />
+          <Property Name="Korisnik" Type="Int32" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Zabeleska" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DogovorSoIzveduvac" Relationship="AvtorskaModel.FK_DogovorSoIzveduvac_Izveduvaci" FromRole="Izveduvaci" ToRole="DogovorSoIzveduvac" />
+          <NavigationProperty Name="Naselbi" Relationship="AvtorskaModel.FK_Izveduvaci_Naselbi" FromRole="Izveduvaci" ToRole="Naselbi" />
+          <NavigationProperty Name="Pol" Relationship="AvtorskaModel.FK_Izveduvaci_Pol" FromRole="Izveduvaci" ToRole="Pol" />
+          <NavigationProperty Name="ZiroSmetkaIzveduvac" Relationship="AvtorskaModel.FK_ZiroSmetkaIzveduvac_Izveduvaci" FromRole="Izveduvaci" ToRole="ZiroSmetkaIzveduvac" />
+        </EntityType>
+        <EntityType Name="Korisnik">
+          <Key>
+            <PropertyRef Name="IdKorisnik" />
+          </Key>
+          <Property Name="IdKorisnik" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LoginIme" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordSalt" Type="Int32" />
+          <Property Name="DatumNaKoristenje" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Naselbi">
+          <Key>
+            <PropertyRef Name="IdNaselba" />
+          </Key>
+          <Property Name="IdNaselba" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sifra" Type="Int32" />
+          <Property Name="OpisNaselba" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="AvtorskiClenovi" Relationship="AvtorskaModel.FK_AvtorskiClenovi_Naselbi" FromRole="Naselbi" ToRole="AvtorskiClenovi" />
+          <NavigationProperty Name="Izveduvaci" Relationship="AvtorskaModel.FK_Izveduvaci_Naselbi" FromRole="Naselbi" ToRole="Izveduvaci" />
+        </EntityType>
+        <EntityType Name="OvaaFirma">
+          <Key>
+            <PropertyRef Name="IdOvaaFirma" />
+          </Key>
+          <Property Name="IdOvaaFirma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Naziv" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MB" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Smetka" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Banka" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Danocen" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Adresa" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Telefono" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Telfaks" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RABGOD" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="DDV" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="LEVA_MARGINA_D" Type="Int32" />
+          <Property Name="PERSA" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="PERS1" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="PERS2" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="PERS3" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="BRUTO1" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="BRUTO2" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="PIO" Type="Decimal" Precision="18" Scale="4" />
+        </EntityType>
+        <EntityType Name="Pol">
+          <Key>
+            <PropertyRef Name="IdPol" />
+          </Key>
+          <Property Name="IdPol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NazivPol" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="AvtorskiClenovi" Relationship="AvtorskaModel.FK_AvtorskiClenovi_Pol" FromRole="Pol" ToRole="AvtorskiClenovi" />
+          <NavigationProperty Name="Izveduvaci" Relationship="AvtorskaModel.FK_Izveduvaci_Pol" FromRole="Pol" ToRole="Izveduvaci" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ZiroSmetkaAvtor">
+          <Key>
+            <PropertyRef Name="IdZiroSmetkaAvtor" />
+          </Key>
+          <Property Name="IdZiroSmetkaAvtor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdAvtor" Type="Int32" Nullable="false" />
+          <Property Name="IdBanka" Type="Int32" Nullable="false" />
+          <Property Name="ZiroSmetka" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="AvtorskiClenovi" Relationship="AvtorskaModel.FK_ZiroSmetkaAvtor_AvtorskiClenovi" FromRole="ZiroSmetkaAvtor" ToRole="AvtorskiClenovi" />
+          <NavigationProperty Name="Banka" Relationship="AvtorskaModel.FK_ZiroSmetkaAvtor_Banka" FromRole="ZiroSmetkaAvtor" ToRole="Banka" />
+        </EntityType>
+        <EntityType Name="ZiroSmetkaIzveduvac">
+          <Key>
+            <PropertyRef Name="IdZiroSmetkaIzveduvac" />
+          </Key>
+          <Property Name="IdZiroSmetkaIzveduvac" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdBanka" Type="Int32" Nullable="false" />
+          <Property Name="IdIzveduvac" Type="Int32" Nullable="false" />
+          <Property Name="ZiroSmetka" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Banka" Relationship="AvtorskaModel.FK_ZiroSmetkaIzveduvac_Banka" FromRole="ZiroSmetkaIzveduvac" ToRole="Banka" />
+          <NavigationProperty Name="Izveduvaci" Relationship="AvtorskaModel.FK_ZiroSmetkaIzveduvac_Izveduvaci" FromRole="ZiroSmetkaIzveduvac" ToRole="Izveduvaci" />
+        </EntityType>
+        <Association Name="FK_AvtorskiClenovi_Naselbi">
+          <End Role="Naselbi" Type="AvtorskaModel.Naselbi" Multiplicity="0..1" />
+          <End Role="AvtorskiClenovi" Type="AvtorskaModel.AvtorskiClenovi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Naselbi">
+              <PropertyRef Name="IdNaselba" />
+            </Principal>
+            <Dependent Role="AvtorskiClenovi">
+              <PropertyRef Name="IdNaselba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AvtorskiClenovi_Pol">
+          <End Role="Pol" Type="AvtorskaModel.Pol" Multiplicity="0..1" />
+          <End Role="AvtorskiClenovi" Type="AvtorskaModel.AvtorskiClenovi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pol">
+              <PropertyRef Name="IdPol" />
+            </Principal>
+            <Dependent Role="AvtorskiClenovi">
+              <PropertyRef Name="IdPol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DogovorSoAvtor_AvtorskiClenovi">
+          <End Role="AvtorskiClenovi" Type="AvtorskaModel.AvtorskiClenovi" Multiplicity="1" />
+          <End Role="DogovorSoAvtor" Type="AvtorskaModel.DogovorSoAvtor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AvtorskiClenovi">
+              <PropertyRef Name="IdAvtorskiClen" />
+            </Principal>
+            <Dependent Role="DogovorSoAvtor">
+              <PropertyRef Name="IdAvtor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZiroSmetkaAvtor_AvtorskiClenovi">
+          <End Role="AvtorskiClenovi" Type="AvtorskaModel.AvtorskiClenovi" Multiplicity="1" />
+          <End Role="ZiroSmetkaAvtor" Type="AvtorskaModel.ZiroSmetkaAvtor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AvtorskiClenovi">
+              <PropertyRef Name="IdAvtorskiClen" />
+            </Principal>
+            <Dependent Role="ZiroSmetkaAvtor">
+              <PropertyRef Name="IdAvtor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AvtorskiDogovor_Dejnosti">
+          <End Role="Dejnosti" Type="AvtorskaModel.Dejnosti" Multiplicity="0..1" />
+          <End Role="AvtorskiDogovor" Type="AvtorskaModel.AvtorskiDogovor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dejnosti">
+              <PropertyRef Name="IdDejnost" />
+            </Principal>
+            <Dependent Role="AvtorskiDogovor">
+              <PropertyRef Name="IdDejnost" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AvtorskiDogovor_Firma">
+          <End Role="Firma" Type="AvtorskaModel.Firma" Multiplicity="0..1" />
+          <End Role="AvtorskiDogovor" Type="AvtorskaModel.AvtorskiDogovor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firma">
+              <PropertyRef Name="IdFirma" />
+            </Principal>
+            <Dependent Role="AvtorskiDogovor">
+              <PropertyRef Name="IdFirma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DogovorSoAvtor_AvtorskiDogovor">
+          <End Role="AvtorskiDogovor" Type="AvtorskaModel.AvtorskiDogovor" Multiplicity="1" />
+          <End Role="DogovorSoAvtor" Type="AvtorskaModel.DogovorSoAvtor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AvtorskiDogovor">
+              <PropertyRef Name="IdAvtorskiDogovor" />
+            </Principal>
+            <Dependent Role="DogovorSoAvtor">
+              <PropertyRef Name="IdDogovor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FakturiAvtorskiDogovor_AvtorskiDogovor">
+          <End Role="AvtorskiDogovor" Type="AvtorskaModel.AvtorskiDogovor" Multiplicity="1" />
+          <End Role="FakturiAvtorskiDogovor" Type="AvtorskaModel.FakturiAvtorskiDogovor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AvtorskiDogovor">
+              <PropertyRef Name="IdAvtorskiDogovor" />
+            </Principal>
+            <Dependent Role="FakturiAvtorskiDogovor">
+              <PropertyRef Name="IdAvtorskiDogovor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZiroSmetkaAvtor_Banka">
+          <End Role="Banka" Type="AvtorskaModel.Banka" Multiplicity="1" />
+          <End Role="ZiroSmetkaAvtor" Type="AvtorskaModel.ZiroSmetkaAvtor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Banka">
+              <PropertyRef Name="IdBanka" />
+            </Principal>
+            <Dependent Role="ZiroSmetkaAvtor">
+              <PropertyRef Name="IdBanka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZiroSmetkaIzveduvac_Banka">
+          <End Role="Banka" Type="AvtorskaModel.Banka" Multiplicity="1" />
+          <End Role="ZiroSmetkaIzveduvac" Type="AvtorskaModel.ZiroSmetkaIzveduvac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Banka">
+              <PropertyRef Name="IdBanka" />
+            </Principal>
+            <Dependent Role="ZiroSmetkaIzveduvac">
+              <PropertyRef Name="IdBanka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DogovorNaDelo_Firma">
+          <End Role="Firma" Type="AvtorskaModel.Firma" Multiplicity="0..1" />
+          <End Role="DogovorNaDelo" Type="AvtorskaModel.DogovorNaDelo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firma">
+              <PropertyRef Name="IdFirma" />
+            </Principal>
+            <Dependent Role="DogovorNaDelo">
+              <PropertyRef Name="IdFirma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DogovorSoIzveduvac_DogovorNaDelo">
+          <End Role="DogovorNaDelo" Type="AvtorskaModel.DogovorNaDelo" Multiplicity="0..1" />
+          <End Role="DogovorSoIzveduvac" Type="AvtorskaModel.DogovorSoIzveduvac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DogovorNaDelo">
+              <PropertyRef Name="IdDogovorNaDelo" />
+            </Principal>
+            <Dependent Role="DogovorSoIzveduvac">
+              <PropertyRef Name="IdDogovor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FakturiDogovorNaDelo_DogovorNaDelo">
+          <End Role="DogovorNaDelo" Type="AvtorskaModel.DogovorNaDelo" Multiplicity="0..1" />
+          <End Role="FakturiDogovorNaDelo" Type="AvtorskaModel.FakturiDogovorNaDelo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DogovorNaDelo">
+              <PropertyRef Name="IdDogovorNaDelo" />
+            </Principal>
+            <Dependent Role="FakturiDogovorNaDelo">
+              <PropertyRef Name="IdDogovorNaDelo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DogovorSoIzveduvac_Izveduvaci">
+          <End Role="Izveduvaci" Type="AvtorskaModel.Izveduvaci" Multiplicity="0..1" />
+          <End Role="DogovorSoIzveduvac" Type="AvtorskaModel.DogovorSoIzveduvac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Izveduvaci">
+              <PropertyRef Name="IdIzveduvaci" />
+            </Principal>
+            <Dependent Role="DogovorSoIzveduvac">
+              <PropertyRef Name="IdIzveduvac" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FakturiAvtorskiDogovor_Fakturi">
+          <End Role="Fakturi" Type="AvtorskaModel.Fakturi" Multiplicity="1" />
+          <End Role="FakturiAvtorskiDogovor" Type="AvtorskaModel.FakturiAvtorskiDogovor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fakturi">
+              <PropertyRef Name="IdFakturi" />
+            </Principal>
+            <Dependent Role="FakturiAvtorskiDogovor">
+              <PropertyRef Name="IdFaktura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FakturiDogovorNaDelo_Fakturi">
+          <End Role="Fakturi" Type="AvtorskaModel.Fakturi" Multiplicity="0..1" />
+          <End Role="FakturiDogovorNaDelo" Type="AvtorskaModel.FakturiDogovorNaDelo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fakturi">
+              <PropertyRef Name="IdFakturi" />
+            </Principal>
+            <Dependent Role="FakturiDogovorNaDelo">
+              <PropertyRef Name="IdFaktura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IstorijaPlakjanje_Fakturi">
+          <End Role="Fakturi" Type="AvtorskaModel.Fakturi" Multiplicity="0..1" />
+          <End Role="IstorijaPlakjanje" Type="AvtorskaModel.IstorijaPlakjanje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fakturi">
+              <PropertyRef Name="IdFakturi" />
+            </Principal>
+            <Dependent Role="IstorijaPlakjanje">
+              <PropertyRef Name="IdFaktura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Izveduvaci_Naselbi">
+          <End Role="Naselbi" Type="AvtorskaModel.Naselbi" Multiplicity="0..1" />
+          <End Role="Izveduvaci" Type="AvtorskaModel.Izveduvaci" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Naselbi">
+              <PropertyRef Name="IdNaselba" />
+            </Principal>
+            <Dependent Role="Izveduvaci">
+              <PropertyRef Name="IdNaselba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Izveduvaci_Pol">
+          <End Role="Pol" Type="AvtorskaModel.Pol" Multiplicity="0..1" />
+          <End Role="Izveduvaci" Type="AvtorskaModel.Izveduvaci" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pol">
+              <PropertyRef Name="IdPol" />
+            </Principal>
+            <Dependent Role="Izveduvaci">
+              <PropertyRef Name="IdPol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZiroSmetkaIzveduvac_Izveduvaci">
+          <End Role="Izveduvaci" Type="AvtorskaModel.Izveduvaci" Multiplicity="1" />
+          <End Role="ZiroSmetkaIzveduvac" Type="AvtorskaModel.ZiroSmetkaIzveduvac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Izveduvaci">
+              <PropertyRef Name="IdIzveduvaci" />
+            </Principal>
+            <Dependent Role="ZiroSmetkaIzveduvac">
+              <PropertyRef Name="IdIzveduvac" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AvtorskaModelStoreContainer" CdmEntityContainer="AvtorskaEntities">
+          <EntitySetMapping Name="AvtorskiClenovi"><EntityTypeMapping TypeName="AvtorskaModel.AvtorskiClenovi"><MappingFragment StoreEntitySet="AvtorskiClenovi">
+            <ScalarProperty Name="IdAvtorskiClen" ColumnName="IdAvtorskiClen" />
+            <ScalarProperty Name="ClenskiBroj" ColumnName="ClenskiBroj" />
+            <ScalarProperty Name="Ime" ColumnName="Ime" />
+            <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+            <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+            <ScalarProperty Name="IdNaselba" ColumnName="IdNaselba" />
+            <ScalarProperty Name="IdPol" ColumnName="IdPol" />
+            <ScalarProperty Name="MaticenBroj" ColumnName="MaticenBroj" />
+            <ScalarProperty Name="LicnaKarta" ColumnName="LicnaKarta" />
+            <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+            <ScalarProperty Name="DatumNaZaclenuvanje" ColumnName="DatumNaZaclenuvanje" />
+            <ScalarProperty Name="Korisnik" ColumnName="Korisnik" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="Zabeleska" ColumnName="Zabeleska" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AvtorskiDogovor"><EntityTypeMapping TypeName="AvtorskaModel.AvtorskiDogovor"><MappingFragment StoreEntitySet="AvtorskiDogovor">
+            <ScalarProperty Name="IdAvtorskiDogovor" ColumnName="IdAvtorskiDogovor" />
+            <ScalarProperty Name="BrojDogovor" ColumnName="BrojDogovor" />
+            <ScalarProperty Name="Godina" ColumnName="Godina" />
+            <ScalarProperty Name="TipA" ColumnName="TipA" />
+            <ScalarProperty Name="Datum" ColumnName="Datum" />
+            <ScalarProperty Name="OpisRabota" ColumnName="OpisRabota" />
+            <ScalarProperty Name="OpisClen2" ColumnName="OpisClen2" />
+            <ScalarProperty Name="IdDejnost" ColumnName="IdDejnost" />
+            <ScalarProperty Name="Personalen" ColumnName="Personalen" />
+            <ScalarProperty Name="Popust" ColumnName="Popust" />
+            <ScalarProperty Name="Neto" ColumnName="Neto" />
+            <ScalarProperty Name="Bruto" ColumnName="Bruto" />
+            <ScalarProperty Name="Dat_Od" ColumnName="Dat_Od" />
+            <ScalarProperty Name="Dat_Do" ColumnName="Dat_Do" />
+            <ScalarProperty Name="Dog_F" ColumnName="Dog_F" />
+            <ScalarProperty Name="God_F" ColumnName="God_F" />
+            <ScalarProperty Name="Provizija" ColumnName="Provizija" />
+            <ScalarProperty Name="Kraj" ColumnName="Kraj" />
+            <ScalarProperty Name="prazno" ColumnName="prazno" />
+            <ScalarProperty Name="tempf" ColumnName="tempf" />
+            <ScalarProperty Name="Mnozi" ColumnName="Mnozi" />
+            <ScalarProperty Name="Sobiraj" ColumnName="Sobiraj" />
+            <ScalarProperty Name="Rabotnik1" ColumnName="Rabotnik1" />
+            <ScalarProperty Name="IdFirma" ColumnName="IdFirma" />
+            <ScalarProperty Name="Korisnik" ColumnName="Korisnik" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Banka"><EntityTypeMapping TypeName="AvtorskaModel.Banka"><MappingFragment StoreEntitySet="Banka">
+            <ScalarProperty Name="IdBanka" ColumnName="IdBanka" />
+            <ScalarProperty Name="NazivBanka" ColumnName="NazivBanka" />
+            <ScalarProperty Name="ZiroSmetka" ColumnName="ZiroSmetka" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Dejnosti"><EntityTypeMapping TypeName="AvtorskaModel.Dejnosti"><MappingFragment StoreEntitySet="Dejnosti">
+            <ScalarProperty Name="IdDejnost" ColumnName="IdDejnost" />
+            <ScalarProperty Name="SifraDejnost" ColumnName="SifraDejnost" />
+            <ScalarProperty Name="PopustDejnost" ColumnName="PopustDejnost" />
+            <ScalarProperty Name="OpisDejnost" ColumnName="OpisDejnost" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DogovorNaDelo"><EntityTypeMapping TypeName="AvtorskaModel.DogovorNaDelo"><MappingFragment StoreEntitySet="DogovorNaDelo">
+            <ScalarProperty Name="IdDogovorNaDelo" ColumnName="IdDogovorNaDelo" />
+            <ScalarProperty Name="Broj" ColumnName="Broj" />
+            <ScalarProperty Name="Godina" ColumnName="Godina" />
+            <ScalarProperty Name="TipA" ColumnName="TipA" />
+            <ScalarProperty Name="Datum" ColumnName="Datum" />
+            <ScalarProperty Name="OpisRabota" ColumnName="OpisRabota" />
+            <ScalarProperty Name="OpisClen2" ColumnName="OpisClen2" />
+            <ScalarProperty Name="Personalen" ColumnName="Personalen" />
+            <ScalarProperty Name="Popust" ColumnName="Popust" />
+            <ScalarProperty Name="Neto" ColumnName="Neto" />
+            <ScalarProperty Name="Bruto" ColumnName="Bruto" />
+            <ScalarProperty Name="Dat_Od" ColumnName="Dat_Od" />
+            <ScalarProperty Name="Dat_Do" ColumnName="Dat_Do" />
+            <ScalarProperty Name="Dog_F" ColumnName="Dog_F" />
+            <ScalarProperty Name="God_F" ColumnName="God_F" />
+            <ScalarProperty Name="Provizija" ColumnName="Provizija" />
+            <ScalarProperty Name="Kraj" ColumnName="Kraj" />
+            <ScalarProperty Name="prazno" ColumnName="prazno" />
+            <ScalarProperty Name="tempf" ColumnName="tempf" />
+            <ScalarProperty Name="IdFirma" ColumnName="IdFirma" />
+            <ScalarProperty Name="Korisnik" ColumnName="Korisnik" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DogovorSoAvtor"><EntityTypeMapping TypeName="AvtorskaModel.DogovorSoAvtor"><MappingFragment StoreEntitySet="DogovorSoAvtor">
+            <ScalarProperty Name="IdDogovorSoAvtor" ColumnName="IdDogovorSoAvtor" />
+            <ScalarProperty Name="IdDogovor" ColumnName="IdDogovor" />
+            <ScalarProperty Name="IdAvtor" ColumnName="IdAvtor" />
+            <ScalarProperty Name="Procent" ColumnName="Procent" />
+            <ScalarProperty Name="Neto" ColumnName="Neto" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DogovorSoIzveduvac"><EntityTypeMapping TypeName="AvtorskaModel.DogovorSoIzveduvac"><MappingFragment StoreEntitySet="DogovorSoIzveduvac">
+            <ScalarProperty Name="IdDogovorIzveduvac" ColumnName="IdDogovorIzveduvac" />
+            <ScalarProperty Name="IdDogovor" ColumnName="IdDogovor" />
+            <ScalarProperty Name="IdIzveduvac" ColumnName="IdIzveduvac" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Fakturi"><EntityTypeMapping TypeName="AvtorskaModel.Fakturi"><MappingFragment StoreEntitySet="Fakturi">
+            <ScalarProperty Name="IdFakturi" ColumnName="IdFakturi" />
+            <ScalarProperty Name="Broj" ColumnName="Broj" />
+            <ScalarProperty Name="Godina" ColumnName="Godina" />
+            <ScalarProperty Name="Datum" ColumnName="Datum" />
+            <ScalarProperty Name="Neto" ColumnName="Neto" />
+            <ScalarProperty Name="DanocnaOsnovica" ColumnName="DanocnaOsnovica" />
+            <ScalarProperty Name="PersonalenDanok" ColumnName="PersonalenDanok" />
+            <ScalarProperty Name="Trosoci" ColumnName="Trosoci" />
+            <ScalarProperty Name="DDV_Osnovica" ColumnName="DDV_Osnovica" />
+            <ScalarProperty Name="DDV_Iznos" ColumnName="DDV_Iznos" />
+            <ScalarProperty Name="DDV_Stapka" ColumnName="DDV_Stapka" />
+            <ScalarProperty Name="Personalen_Stapka" ColumnName="Personalen_Stapka" />
+            <ScalarProperty Name="Popust" ColumnName="Popust" />
+            <ScalarProperty Name="Iznos" ColumnName="Iznos" />
+            <ScalarProperty Name="Tekst" ColumnName="Tekst" />
+            <ScalarProperty Name="Plateno" ColumnName="Plateno" />
+            <ScalarProperty Name="DatumPlateno" ColumnName="DatumPlateno" />
+            <ScalarProperty Name="GL_Spisok" ColumnName="GL_Spisok" />
+            <ScalarProperty Name="GOD_S" ColumnName="GOD_S" />
+            <ScalarProperty Name="DOG_K" ColumnName="DOG_K" />
+            <ScalarProperty Name="GOD_K" ColumnName="GOD_K" />
+            <ScalarProperty Name="prazno" ColumnName="prazno" />
+            <ScalarProperty Name="tempf" ColumnName="tempf" />
+            <ScalarProperty Name="Seuste_Ne" ColumnName="Seuste_Ne" />
+            <ScalarProperty Name="Korisnik" ColumnName="Korisnik" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FakturiAvtorskiDogovor"><EntityTypeMapping TypeName="AvtorskaModel.FakturiAvtorskiDogovor"><MappingFragment StoreEntitySet="FakturiAvtorskiDogovor">
+            <ScalarProperty Name="IdFakturiAvtorskiDogovor" ColumnName="IdFakturiAvtorskiDogovor" />
+            <ScalarProperty Name="IdFaktura" ColumnName="IdFaktura" />
+            <ScalarProperty Name="IdAvtorskiDogovor" ColumnName="IdAvtorskiDogovor" />
+            <ScalarProperty Name="Bruto" ColumnName="Bruto" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FakturiDogovorNaDelo"><EntityTypeMapping TypeName="AvtorskaModel.FakturiDogovorNaDelo"><MappingFragment StoreEntitySet="FakturiDogovorNaDelo">
+            <ScalarProperty Name="IdFakturiDogovorNaDelo" ColumnName="IdFakturiDogovorNaDelo" />
+            <ScalarProperty Name="IdFaktura" ColumnName="IdFaktura" />
+            <ScalarProperty Name="IdDogovorNaDelo" ColumnName="IdDogovorNaDelo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Firma"><EntityTypeMapping TypeName="AvtorskaModel.Firma"><MappingFragment StoreEntitySet="Firma">
+            <ScalarProperty Name="IdFirma" ColumnName="IdFirma" />
+            <ScalarProperty Name="BrFirma" ColumnName="BrFirma" />
+            <ScalarProperty Name="Firma1" ColumnName="Firma" />
+            <ScalarProperty Name="KontaktLice" ColumnName="KontaktLice" />
+            <ScalarProperty Name="Telefoni" ColumnName="Telefoni" />
+            <ScalarProperty Name="ProvizijaA" ColumnName="ProvizijaA" />
+            <ScalarProperty Name="ProvizijaD" ColumnName="ProvizijaD" />
+            <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+            <ScalarProperty Name="Zastapnik" ColumnName="Zastapnik" />
+            <ScalarProperty Name="DatumNaVnesuvanje" ColumnName="DatumNaVnesuvanje" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="IstorijaPlakjanje"><EntityTypeMapping TypeName="AvtorskaModel.IstorijaPlakjanje"><MappingFragment StoreEntitySet="IstorijaPlakjanje">
+            <ScalarProperty Name="IdIstorijaPlakjanje" ColumnName="IdIstorijaPlakjanje" />
+            <ScalarProperty Name="IdFaktura" ColumnName="IdFaktura" />
+            <ScalarProperty Name="Datum" ColumnName="Datum" />
+            <ScalarProperty Name="PlakjaSega" ColumnName="PlakjaSega" />
+            <ScalarProperty Name="Otposle" ColumnName="Otposle" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Izveduvaci"><EntityTypeMapping TypeName="AvtorskaModel.Izveduvaci"><MappingFragment StoreEntitySet="Izveduvaci">
+            <ScalarProperty Name="IdIzveduvaci" ColumnName="IdIzveduvaci" />
+            <ScalarProperty Name="Broj" ColumnName="Broj" />
+            <ScalarProperty Name="Ime" ColumnName="Ime" />
+            <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+            <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+            <ScalarProperty Name="IdNaselba" ColumnName="IdNaselba" />
+            <ScalarProperty Name="IdPol" ColumnName="IdPol" />
+            <ScalarProperty Name="MaticenBroj" ColumnName="MaticenBroj" />
+            <ScalarProperty Name="LicnaKarta" ColumnName="LicnaKarta" />
+            <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+            <ScalarProperty Name="DatumNaZaclenuvanje" ColumnName="DatumNaZaclenuvanje" />
+            <ScalarProperty Name="Korisnik" ColumnName="Korisnik" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="Zabeleska" ColumnName="Zabeleska" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Korisnik"><EntityTypeMapping TypeName="AvtorskaModel.Korisnik"><MappingFragment StoreEntitySet="Korisnik">
+            <ScalarProperty Name="IdKorisnik" ColumnName="IdKorisnik" />
+            <ScalarProperty Name="Ime" ColumnName="Ime" />
+            <ScalarProperty Name="LoginIme" ColumnName="LoginIme" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+            <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+            <ScalarProperty Name="DatumNaKoristenje" ColumnName="DatumNaKoristenje" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Naselbi"><EntityTypeMapping TypeName="AvtorskaModel.Naselbi"><MappingFragment StoreEntitySet="Naselbi">
+            <ScalarProperty Name="IdNaselba" ColumnName="IdNaselba" />
+            <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+            <ScalarProperty Name="OpisNaselba" ColumnName="OpisNaselba" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="OvaaFirma"><EntityTypeMapping TypeName="AvtorskaModel.OvaaFirma"><MappingFragment StoreEntitySet="OvaaFirma">
+            <ScalarProperty Name="IdOvaaFirma" ColumnName="IdOvaaFirma" />
+            <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+            <ScalarProperty Name="MB" ColumnName="MB" />
+            <ScalarProperty Name="Smetka" ColumnName="Smetka" />
+            <ScalarProperty Name="Banka" ColumnName="Banka" />
+            <ScalarProperty Name="Danocen" ColumnName="Danocen" />
+            <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+            <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+            <ScalarProperty Name="Telfaks" ColumnName="Telfaks" />
+            <ScalarProperty Name="RABGOD" ColumnName="RABGOD" />
+            <ScalarProperty Name="DDV" ColumnName="DDV" />
+            <ScalarProperty Name="LEVA_MARGINA_D" ColumnName="LEVA_MARGINA_D" />
+            <ScalarProperty Name="PERSA" ColumnName="PERSA" />
+            <ScalarProperty Name="PERS1" ColumnName="PERS1" />
+            <ScalarProperty Name="PERS2" ColumnName="PERS2" />
+            <ScalarProperty Name="PERS3" ColumnName="PERS3" />
+            <ScalarProperty Name="BRUTO1" ColumnName="BRUTO1" />
+            <ScalarProperty Name="BRUTO2" ColumnName="BRUTO2" />
+            <ScalarProperty Name="PIO" ColumnName="PIO" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Pol"><EntityTypeMapping TypeName="AvtorskaModel.Pol"><MappingFragment StoreEntitySet="Pol">
+            <ScalarProperty Name="IdPol" ColumnName="IdPol" />
+            <ScalarProperty Name="NazivPol" ColumnName="NazivPol" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams"><EntityTypeMapping TypeName="AvtorskaModel.sysdiagrams"><MappingFragment StoreEntitySet="sysdiagrams">
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+            <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+            <ScalarProperty Name="version" ColumnName="version" />
+            <ScalarProperty Name="definition" ColumnName="definition" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ZiroSmetkaAvtor"><EntityTypeMapping TypeName="AvtorskaModel.ZiroSmetkaAvtor"><MappingFragment StoreEntitySet="ZiroSmetkaAvtor">
+            <ScalarProperty Name="IdZiroSmetkaAvtor" ColumnName="IdZiroSmetkaAvtor" />
+            <ScalarProperty Name="IdAvtor" ColumnName="IdAvtor" />
+            <ScalarProperty Name="IdBanka" ColumnName="IdBanka" />
+            <ScalarProperty Name="ZiroSmetka" ColumnName="ZiroSmetka" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ZiroSmetkaIzveduvac"><EntityTypeMapping TypeName="AvtorskaModel.ZiroSmetkaIzveduvac"><MappingFragment StoreEntitySet="ZiroSmetkaIzveduvac">
+            <ScalarProperty Name="IdZiroSmetkaIzveduvac" ColumnName="IdZiroSmetkaIzveduvac" />
+            <ScalarProperty Name="IdBanka" ColumnName="IdBanka" />
+            <ScalarProperty Name="IdIzveduvac" ColumnName="IdIzveduvac" />
+            <ScalarProperty Name="ZiroSmetka" ColumnName="ZiroSmetka" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Avtorska">
+        <EntityTypeShape EntityType="AvtorskaModel.AvtorskiClenovi" Width="1.5" PointX="3" PointY="4.625" Height="4.480205078125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.AvtorskiDogovor" Width="1.5" PointX="6" PointY="11.5" Height="6.5955208333333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.Banka" Width="1.5" PointX="6" PointY="1.875" Height="1.9802864583333326" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.Dejnosti" Width="1.5" PointX="3.75" PointY="11.875" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.DogovorNaDelo" Width="1.5" PointX="6" PointY="19" Height="5.634013671874996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.DogovorSoAvtor" Width="1.5" PointX="8.25" PointY="5.625" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.DogovorSoIzveduvac" Width="1.5" PointX="8.25" PointY="8.875" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.Fakturi" Width="1.5" PointX="10.75" PointY="9.875" Height="6.4032194010416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.FakturiAvtorskiDogovor" Width="1.5" PointX="13" PointY="13" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.FakturiDogovorNaDelo" Width="1.5" PointX="16" PointY="16.25" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.Firma" Width="1.5" PointX="3.75" PointY="14.5" Height="3.3263964843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.IstorijaPlakjanje" Width="1.5" PointX="13" PointY="17.75" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.Izveduvaci" Width="1.5" PointX="6" PointY="4.625" Height="4.4802050781250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.Korisnik" Width="1.5" PointX="2.75" PointY="0.75" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.Naselbi" Width="1.5" PointX="0.75" PointY="5.875" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.OvaaFirma" Width="1.5" PointX="0.75" PointY="10.75" Height="4.6725065104166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.Pol" Width="1.5" PointX="0.75" PointY="3" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="0.75" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.ZiroSmetkaAvtor" Width="1.5" PointX="8.25" PointY="2.75" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtorskaModel.ZiroSmetkaIzveduvac" Width="1.5" PointX="11.25" PointY="5.75" Height="2.172587890624996" IsExpanded="true" />
+        <AssociationConnector Association="AvtorskaModel.FK_AvtorskiClenovi_Naselbi" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="6.8651432291666694" />
+          <ConnectorPoint PointX="3" PointY="6.8651432291666694" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_AvtorskiClenovi_Pol" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="3.8124995" />
+          <ConnectorPoint PointX="3.75" PointY="3.8124995" />
+          <ConnectorPoint PointX="3.75" PointY="4.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_DogovorSoAvtor_AvtorskiClenovi" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.156252" PointY="4.625" />
+          <ConnectorPoint PointX="4.156252" PointY="4.375" />
+          <ConnectorPoint PointX="4.322916666666667" PointY="4.3749999999999991" />
+          <ConnectorPoint PointX="4.489583333333333" PointY="4.375" />
+          <ConnectorPoint PointX="5.666666666666667" PointY="4.3749999999999991" />
+          <ConnectorPoint PointX="5.833333333333333" PointY="4.375" />
+          <ConnectorPoint PointX="7.875" PointY="4.375" />
+          <ConnectorPoint PointX="7.875" PointY="6.8074446614583337" />
+          <ConnectorPoint PointX="8.25" PointY="6.8074446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_ZiroSmetkaAvtor_AvtorskiClenovi" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.40625" PointY="4.625" />
+          <ConnectorPoint PointX="4.40625" PointY="4.1463932291666659" />
+          <ConnectorPoint PointX="5.4380598958333328" PointY="4.146393229166665" />
+          <ConnectorPoint PointX="5.6047265624999989" PointY="4.1463932291666659" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="4.146393229166665" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="4.1463932291666659" />
+          <ConnectorPoint PointX="8.25" PointY="4.1463932291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_AvtorskiDogovor_Dejnosti" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="12.865143229166666" />
+          <ConnectorPoint PointX="6" PointY="12.865143229166666" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_AvtorskiDogovor_Firma" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="16.1631982421875" />
+          <ConnectorPoint PointX="6" PointY="16.1631982421875" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_DogovorSoAvtor_AvtorskiDogovor" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="11.563460538461539" />
+          <ConnectorPoint PointX="7.9375" PointY="11.125960538461541" />
+          <ConnectorPoint PointX="7.9375" PointY="7.4299189921875008" />
+          <ConnectorPoint PointX="8.25" PointY="7.4299189921875008" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_FakturiAvtorskiDogovor_AvtorskiDogovor" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="14.860742685897435" />
+          <ConnectorPoint PointX="8.9166666666666661" PointY="14.860742685897435" />
+          <ConnectorPoint PointX="9.0833333333333339" PointY="14.860742685897435" />
+          <ConnectorPoint PointX="10.5" PointY="14.860742685897435" />
+          <ConnectorPoint PointX="10.5" PointY="16.528219401041667" />
+          <ConnectorPoint PointX="11.416666666666666" PointY="16.528219401041667" />
+          <ConnectorPoint PointX="11.583333333333334" PointY="16.528219401041667" />
+          <ConnectorPoint PointX="13.75" PointY="16.528219401041667" />
+          <ConnectorPoint PointX="13.75" PointY="15.172587890625" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_ZiroSmetkaAvtor_Banka" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="3.3026432291666663" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="3.3026432291666659" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="3.3026432291666663" />
+          <ConnectorPoint PointX="8.25" PointY="3.3026432291666663" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_ZiroSmetkaIzveduvac_Banka" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="2.5575696145833322" />
+          <ConnectorPoint PointX="8" PointY="2.5575696145833322" />
+          <ConnectorPoint PointX="8" PointY="5.172587890624996" />
+          <ConnectorPoint PointX="12" PointY="5.172587890624996" />
+          <ConnectorPoint PointX="12" PointY="5.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_DogovorNaDelo_Firma" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="17.826396484375003" />
+          <ConnectorPoint PointX="4.5" PointY="21.817006835937498" />
+          <ConnectorPoint PointX="6" PointY="21.817006835937498" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_DogovorSoIzveduvac_DogovorNaDelo" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="21.817006835937498" />
+          <ConnectorPoint PointX="9" PointY="21.817006835937498" />
+          <ConnectorPoint PointX="9" PointY="10.855286458333332" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_FakturiDogovorNaDelo_DogovorNaDelo" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="23.256762753906248" />
+          <ConnectorPoint PointX="16.75" PointY="23.256762753906248" />
+          <ConnectorPoint PointX="16.75" PointY="18.230286458333332" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_DogovorSoIzveduvac_Izveduvaci" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="9.1052050781250031" />
+          <ConnectorPoint PointX="6.75" PointY="9.9802462682291662" />
+          <ConnectorPoint PointX="7.854166666666667" PointY="9.9802462682291662" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="9.9802462682291662" />
+          <ConnectorPoint PointX="8.25" PointY="9.9802462682291662" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_FakturiAvtorskiDogovor_Fakturi" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.25" PointY="14.0862939453125" />
+          <ConnectorPoint PointX="13" PointY="14.0862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_FakturiDogovorNaDelo_Fakturi" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.25" PointY="11.40625" />
+          <ConnectorPoint PointX="16.75" PointY="11.40625" />
+          <ConnectorPoint PointX="16.75" PointY="16.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_IstorijaPlakjanje_Fakturi" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.5" PointY="16.278219401041667" />
+          <ConnectorPoint PointX="11.5" PointY="18.8362939453125" />
+          <ConnectorPoint PointX="13" PointY="18.8362939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_Izveduvaci_Naselbi" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="7.8552864583333388" />
+          <ConnectorPoint PointX="2.625" PointY="8.2302864583333388" />
+          <ConnectorPoint PointX="2.625" PointY="9.4802050781250031" />
+          <ConnectorPoint PointX="5.6261528461538468" PointY="9.4802050781250031" />
+          <ConnectorPoint PointX="6.0011528461538459" PointY="9.1052050781250031" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_Izveduvaci_Pol" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4.7879850260416674" />
+          <ConnectorPoint PointX="2.625" PointY="5.1629850260416674" />
+          <ConnectorPoint PointX="2.625" PointY="4" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="3.9999999999999996" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="4" />
+          <ConnectorPoint PointX="5.375" PointY="4" />
+          <ConnectorPoint PointX="6" PointY="4.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="AvtorskaModel.FK_ZiroSmetkaIzveduvac_Izveduvaci" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="8.4324446614583337" />
+          <ConnectorPoint PointX="7.854166666666667" PointY="8.4324446614583337" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="8.4324446614583337" />
+          <ConnectorPoint PointX="12" PointY="8.4324446614583337" />
+          <ConnectorPoint PointX="12" PointY="7.922587890624996" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
